@@ -7,10 +7,10 @@
     <title>Home | EcoMart</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <style>
-        /* Internal CSS for Hero Background - Rubric 3.2 */
+        /* INTERNAL CSS: PAGE-SPECIFIC LAYOUT MATH */
         .heroBanner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Assets/hero-bg.jpg') center/cover no-repeat;
-            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Assets/landingImage.jpg') center/cover no-repeat;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,13 +18,90 @@
             color: white;
             border-bottom: 5px solid #2e7d32;
         }
+
+        .productRow {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .productCardLarge {
+            flex: 1;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #f0f0f0;
+        }
+
+        .productCardLarge:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(46, 125, 50, 0.12);
+            border-color: #2e7d32;
+        }
+
+        .imgContainer {
+            width: 100%;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f8f8f8;
+            margin-bottom: 20px;
+        }
+
+        .imgContainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .productCardLarge:hover .imgContainer img {
+            transform: scale(1.05);
+        }
+
+        main section .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .previewBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            border-top: 4px solid #2e7d32;
+            cursor: pointer;
+        }
+
+        .iconWrapperSmall {
+            background: #f4fdf4; 
+            height: 120px; 
+            border-radius: 4px; 
+            margin-bottom: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 1100px) {
+            main section .grid { grid-template-columns: repeat(2, 1fr); }
+            .productRow { flex-direction: column; align-items: center; }
+            .imgContainer { height: 300px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <div class="logoContainer" style="width: 128px">
-                <img src="Assets/SampleLogo.svg" alt="EcoMart Logo">
+            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+                <img src="Assets/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
         <nav aria-label="Main Navigation">
@@ -41,9 +118,8 @@
     <main class="reveal">
         <section class="heroBanner">
             <div class="container">
-                <h2>Live Sustainably, Shop Consciously</h2>
-                <p>Premium bamboo bottles, organic textiles, and biodegradable essentials curated for a greener future.</p>
-                
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Live Sustainably, Shop Consciously</h1>
+                <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto;">Premium bamboo and Himalayan hemp essentials curated for Nepal.</p>
                 <div class="ctaWrapper">
                     <a href="Pages/products.html" class="btnPrimary">Browse Products</a>
                     <a href="Pages/about.html" class="btnSecondary">Our Mission</a>
@@ -51,22 +127,82 @@
             </div>
         </section>
 
-        <section id="contentPreview">
+        <section style="padding: 100px 0; background-color: #f9fdf9;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 30px;">Explore Our Site</h2>
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="color: #2e7d32; font-size: 2.5rem;">Featured Essentials</h2>
+                    <p style="color: #666;">Top-rated sustainable items in NPR.</p>
+                </div>
+                <div class="productRow">
+                    <article class="productCardLarge">
+                        <div class="imgContainer">
+                            <img src="Assets/bambooWaterBottle.png" alt="Bamboo Water Bottle">
+                        </div>
+                        <h3>Bamboo Water Bottle</h3>
+                        <p style="color: #2e7d32; font-weight: 700; font-size: 1.8rem;">Rs. 1,200</p>
+                    </article>
+                    <article class="productCardLarge">
+                        <div class="imgContainer">
+                            <img src="Assets/hempLaptopBag.jpg" alt="Hemp Laptop Bag">
+                        </div>
+                        <h3>Hemp Laptop Bag</h3>
+                        <p style="color: #2e7d32; font-weight: 700; font-size: 1.8rem;">Rs. 3,500</p>
+                    </article>
+                    <article class="productCardLarge">
+                        <div class="imgContainer">
+                            <img src="Assets/hempYogaMat.jpg" alt="Hemp Yoga Mat">
+                        </div>
+                        <h3>Hemp Yoga Mat</h3>
+                        <p style="color: #2e7d32; font-weight: 700; font-size: 1.8rem;">Rs. 4,200</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 100px 0; background: #fff;">
+            <div class="container">
+                <h2 style="text-align: center; color: #2e7d32; margin-bottom: 40px;">Explore Our Platform</h2>
                 <div class="grid">
-                    <div class="previewBox">
-                        <h3>E-Commerce</h3>
-                        <p>View our catalog of organic and reusable lifestyle products.</p>
-                    </div>
-                    <div class="previewBox">
-                        <h3>Daily Impacts</h3>
-                        <p>Read how modern technology affects eco-friendly business practices.</p>
-                    </div>
-                    <div class="previewBox">
-                        <h3>Team Portfolio</h3>
-                        <p>Meet the five-person group behind EcoMart's development.</p>
-                    </div>
+                    <a href="Pages/products.html" style="text-decoration: none; color: inherit;">
+                        <article class="previewBox">
+                            <div>
+                                <div class="iconWrapperSmall">🛒</div>
+                                <h4>Shop</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Full catalog.</p>
+                            </div>
+                            <span style="display: block; margin-top: 10px; color: #2e7d32; font-weight: 700;">View →</span>
+                        </article>
+                    </a>
+                    <a href="Pages/blog.html" style="text-decoration: none; color: inherit;">
+                        <article class="previewBox">
+                            <div>
+                                <div class="iconWrapperSmall">📄</div>
+                                <h4>Blog</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Impact insights.</p>
+                            </div>
+                            <span style="display: block; margin-top: 10px; color: #2e7d32; font-weight: 700;">View →</span>
+                        </article>
+                    </a>
+                    <a href="Pages/research.html" style="text-decoration: none; color: inherit;">
+                        <article class="previewBox">
+                            <div>
+                                <div class="iconWrapperSmall">📊</div>
+                                <h4>Research</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Tech strategy.</p>
+                            </div>
+                            <span style="display: block; margin-top: 10px; color: #2e7d32; font-weight: 700;">View →</span>
+                        </article>
+                    </a>
+                    <a href="Pages/about.html" style="text-decoration: none; color: inherit;">
+                        <article class="previewBox">
+                            <div>
+                                <div class="iconWrapperSmall">👥</div>
+                                <h4>About</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Meet the team.</p>
+                            </div>
+                            <span style="display: block; margin-top: 10px; color: #2e7d32; font-weight: 700;">View →</span>
+                        </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -75,26 +211,24 @@
     <footer>
         <div class="footerGrid">
             <div class="footerBrand">
-                <h2>EcoMart</h2>
-                <p>If it's Green Day, it's a Good Day. Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons">
-                    <span>📸</span> <span>🔗</span> <span>𝕏</span>
+                <div class="logoContainer" style="width: 128px; margin-bottom: 15px;">
+                    <img src="Assets/logo.svg" alt="EcoMart Logo">
                 </div>
+                <p>Promoting ethical commerce since 2025.</p>
+                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
-                        <div class="footerLinks">
+            <div class="footerLinks">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="Pages/about.html">About Us</a></li>
                     <li><a href="Pages/research.html">Research</a></li>
                     <li><a href="Pages/blog.html">Blog</a></li>
-                    <li><a href="Pages/about.html#contact">Contact</a></li>
                 </ul>
             </div>
-        </div>
         </div>
         <div class="footerBottom">
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
 </body>
-</html> 
+</html>

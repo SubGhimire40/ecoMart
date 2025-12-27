@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMart - Research and Analysis of Web Components">
     <title>Research | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* Specific Table Styling to compliment global CSS */
-        table {
+        /* INTERNAL CSS: RESEARCH TABLE MATH */
+        .researchHero {
+            padding: 60px 0;
+            text-align: center;
+            background: #f4fdf4;
+        }
+
+        .researchTable {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 30px;
+            margin: 40px 0;
             background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        th, td {
-            padding: 18px 25px;
+
+        .researchTable th, .researchTable td {
+            border: 1px solid #ddd;
+            padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
-        th {
-            background: #2e7d32;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+
+        .researchTable th {
+            background-color: #2e7d32;
+            color: white;
+            font-weight: 700;
         }
-        tr:hover {
-            background-color: #f9fdf9;
+
+        .researchTable tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .analysisBox {
+            padding: 25px;
+            background: #fafafa;
+            border-left: 5px solid #2e7d32;
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logoContainer">
-            <a href="../index.html">
-                <img src="../Assets/SampleLogo.svg" alt="EcoMart Logo">
-            </a>
-        </div>
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+                <img src="../Assets/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -51,78 +62,84 @@
         </nav>
     </header>
 
-    <main class="container reveal">
-        <section style="text-align: center; margin-bottom: 40px;">
-            <h1 style="font-size: 2.5rem; color: #2e7d32; margin-bottom: 10px;">Design Research</h1>
-            <p>Comparing our implementation strategies against industry-leading benchmarks.</p>
+    <main class="reveal">
+        <section class="researchHero">
+            <div class="container">
+                <h1 style="color: #2e7d32; font-size: 2.5rem;">Competitive Analysis</h1>
+                <p>Contrasting EcoMart's components against industry benchmarks and creative inspirations.</p>
+            </div>
         </section>
 
-        <article class="previewBox" style="padding: 20px; border: none;">
-            <h2>Component Comparison</h2>
-            <table>
+        <section class="container" style="padding: 40px 0;">
+            <div class="analysisBox">
+                <h3>Research Objective</h3>
+                <p>To investigate how modern e-commerce platforms balance functional grid layouts with sustainable branding, specifically comparing local Nepali markets (Daraz) with global standards (Amazon) and creative agencies (Awwwards).</p>
+            </div>
+
+            <table class="researchTable">
                 <thead>
                     <tr>
-                        <th>Component</th>
-                        <th>EcoMart Implementation</th>
-                        <th>Reference Benchmark</th>
+                        <th>Reference Website</th>
+                        <th>Component Investigated</th>
+                        <th>EcoMart Contrast</th>
+                        <th>Peculiarities Identified</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Navigation Bar</strong></td>
-                        <td>Flexbox Single-Row (Sticky)</td>
-                        <td>Amazon (Complex Dropdown)</td>
+                        <td><strong>EcoMart Malaysia</strong><br>(ecomart.com.my)</td>
+                        <td>Branding & Header Navigation</td>
+                        <td>EcoMart (NP) adopts a similar "Green-First" identity but optimizes the nav for academic simplicity.</td>
+                        <td>Uses a specific color palette that emphasizes organic trust and eco-certified labeling.</td>
                     </tr>
                     <tr>
-                        <td><strong>Product Grid</strong></td>
-                        <td>CSS Grid (Auto-Fit)</td>
-                        <td>IKEA (Standard List)</td>
+                        <td><strong>Daraz Nepal</strong><br>(daraz.com.np)</td>
+                        <td>Landing Page Product Preview</td>
+                        <td>EcoMart utilizes the "Flash Sale" pricing logic seen here but removes the cluttered banners.</td>
+                        <td>High-density grid with heavy use of time-sensitive discount triggers.</td>
                     </tr>
                     <tr>
-                        <td><strong>Footer Layout</strong></td>
-                        <td>Horizontal Multi-Column</td>
-                        <td>EarthHero (Eco-Commerce)</td>
+                        <td><strong>Amazon India</strong><br>(amazon.in)</td>
+                        <td>Product Card Architecture</td>
+                        <td>EcoMart follows the Amazon logic of "Image > Title > Price > CTA" for maximum usability.</td>
+                        <td>Massive focus on dual-pricing (Original vs. Deal Price) to drive conversions.</td>
                     </tr>
                     <tr>
-                        <td><strong>Visual Feedback</strong></td>
-                        <td>Cubic-Bezier Scaling</td>
-                        <td>Apple (Smooth Transitions)</td>
+                        <td><strong>Crearist (Awwwards)</strong><br>(awwwards.com)</td>
+                        <td>Creative Product Page Inspo</td>
+                        <td>EcoMart adopts the "Clean Space" and typography logic while maintaining a pragmatic structure.</td>
+                        <td>Experimental layout that prioritizes visual storytelling over traditional grid density.</td>
                     </tr>
                 </tbody>
             </table>
-        </article>
+
+            <div class="analysisBox">
+                <h3>Technical Conclusion</h3>
+                <p>The research confirms that while <strong>Amazon</strong> and <strong>Daraz</strong> provide the most usable data structures for product cards, the branding inspiration from <strong>EcoMart Malaysia</strong> is essential for establishing niche identity. My implementation avoids the "clutter-heavy" peculiarity of Daraz, opting instead for the "Creative-Clean" approach found on <strong>Awwwards</strong> listings.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footerGrid">
             <div class="footerBrand">
-                <h2>EcoMart</h2>
-                <p>If it's Green Day, it's a Good Day. Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons">
-                    <span>📸</span> <span>🔗</span> <span>𝕏</span>
+                <div class="logoContainer" style="width: 128px; margin-bottom: 15px;">
+                    <img src="../Assets/logo.svg" alt="EcoMart Logo">
                 </div>
+                <p>Academic Research Section - CC4057NI Group Project.</p>
+                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
-            
             <div class="footerLinks">
-                <h4>Company</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="blog.html">Impact Blog</a></li>
-                </ul>
-            </div>
-
-            <div class="footerLinks">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="about.html#contact">Contact Us</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Terms & Privacy</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
         </div>
         <div class="footerBottom">
-            <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
+            <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
         </div>
     </footer>
 </body>

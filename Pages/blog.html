@@ -3,16 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMart Blog - Technology and Environmental Impacts">
     <title>Blog | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        /* INTERNAL CSS: BLOG SPECIFIC LAYOUT */
+        .blogHero {
+            padding: 80px 0;
+            text-align: center;
+            background: #f4fdf4;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blogImageWrapper {
+            width: 100%;
+            height: 350px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: #2e7d32;
+            font-weight: 700;
+            border: 2px dashed #2e7d32;
+        }
+
+        .postContent {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .techHighlight {
+            border-left: 4px solid #2e7d32;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* Reference List Styling */
+        .referenceSection {
+            margin-top: 60px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .referenceSection ol {
+            padding-left: 20px;
+        }
+
+        .referenceSection li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logoContainer">
-            <a href="../index.html">
-                <img src="../Assets/SampleLogo.svg" alt="EcoMart Logo">
-            </a>
-        </div>
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+                <img src="../Assets/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -24,58 +78,75 @@
         </nav>
     </header>
 
-    <main class="container reveal">
-        <section style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; color: #2e7d32; margin-bottom: 10px;">Eco-Insights</h1>
-            <p>Exploring the intersection of modern technology and environmental stewardship.</p>
+    <main class="reveal">
+        <section class="blogHero">
+            <div class="container">
+                <h1 style="color: #2e7d32; font-size: 2.8rem; margin-bottom: 15px;">Eco-Insights</h1>
+                <p style="font-size: 1.2rem; color: #666;">Analyzing how digital innovation drives global sustainability goals [1].</p>
+            </div>
         </section>
 
-        <div class="grid">
-            <article class="previewBox" style="grid-column: span 2;">
-                <h2 style="margin-bottom: 15px; color: #2e7d32;">Technology and Sustainability</h2>
-                <p>Modern internet technologies have transformed how we interact with the environment. From smart grid management to carbon-conscious e-commerce platforms, technology streamlines sustainable choices and makes green living accessible to the masses.</p>
-                <p style="margin-top: 15px;">By leveraging cloud infrastructure and AI-driven logistics, companies can now predict demand with high accuracy, drastically reducing overproduction and warehouse waste.</p>
-            </article>
+        <section class="container" style="padding: 60px 0;">
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 50px;">
+                
+                <div class="postContent">
+                    <article style="margin-bottom: 80px;">
+                        <div class="blogImageWrapper">IMPACT: CLOUD COMPUTING & LOGISTICS</div>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #2e7d32;">Technology: The Silent Engine of Sustainability</h2>
+                        <p>Modern internet technologies have fundamentally shifted how businesses manage their environmental footprint. Digital supply chain tracking allows companies like EcoMart to monitor the lifecycle of products in real-time, significantly reducing the carbon footprint associated with inefficient logistics and overproduction [2].</p>
+                        
+                        <div class="techHighlight">
+                            "By optimizing delivery routes through AI and reducing paper-based documentation, businesses can reduce operational waste by up to 30% [1]."
+                        </div>
 
-            <article class="previewBox">
-                <h3 style="margin-bottom: 10px;">Business Impacts</h3>
-                <p>Digital supply chains reduce paper waste and optimize delivery routes, significantly lowering the carbon footprint of retail businesses like EcoMart.</p>
-                <a href="#" style="display: inline-block; margin-top: 20px; color: #2e7d32; font-weight: 700; text-decoration: none;">Read More →</a>
-            </article>
+                        <p>For the consumer, technology bridges the trust gap. Mobile applications now allow shoppers to scan QR codes and instantly verify the "fair trade" status or ethical origin of a bamboo toothbrush or hemp textile [3]. This transparency empowers daily shoppers to make high-impact environmental decisions through their digital devices.</p>
+                    </article>
 
-            <article class="previewBox">
-                <h3 style="margin-bottom: 10px;">Green Hosting</h3>
-                <p>EcoMart is committed to using servers powered by renewable energy, ensuring our digital presence is as green as our physical products.</p>
-                <a href="#" style="display: inline-block; margin-top: 20px; color: #2e7d32; font-weight: 700; text-decoration: none;">Read More →</a>
-            </article>
-        </div>
+                    <article>
+                        <div class="blogImageWrapper">IMPACT: INTERNET OF THINGS (IoT)</div>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #2e7d32;">Smart Homes and Green Living</h2>
+                        <p>Daily life is now optimized through the Internet of Things (IoT). Smart grids and automated domestic systems use sensors to adjust energy consumption based on real-time occupancy, effectively reducing domestic electricity waste [1]. These high-tech solutions are no longer luxuries; they are essential tools for maintaining a low-impact lifestyle in an urban environment [2].</p>
+                    </article>
+
+                    <section class="referenceSection">
+                        <h3 style="margin-bottom: 15px; color: #333;">References</h3>
+                        <ol>
+                            <li>Global e-Sustainability Initiative (GeSI). (2025). <i>#DigitalWithPurpose: Delivering a SMARTer2030</i>. Research on how digital technology helps achieve UN Sustainable Development Goals.</li>
+                            <li>International Energy Agency (IEA). (2024). <i>Digitalization and Energy Report</i>. Impact of smart technology on domestic and industrial energy efficiency.</li>
+                            <li>United Nations Environment Programme (UNEP). (2024). <i>Technology and the Environment: Bridging the Gap</i>. Guidelines for ethical e-commerce and digital supply chain transparency.</li>
+                        </ol>
+                    </section>
+                </div>
+
+                <aside>
+                    <div class="previewBox" style="position: sticky; top: 100px;">
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2e7d32; display: inline-block;">Recent Posts</h3>
+                        <ul style="list-style: none; margin-top: 15px;">
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Digital Supply Chains →</a></li>
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">The Future of Hemp Tech →</a></li>
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">AI in Reforestation →</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footerGrid">
             <div class="footerBrand">
-                <h2>EcoMart</h2>
-                <p>If it's Green Day, it's a Good Day. Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons">
-                    <span>📸</span> <span>🔗</span> <span>𝕏</span>
+                <div class="logoContainer" style="width: 128px; margin-bottom: 15px;">
+                    <img src="../Assets/logo.svg" alt="EcoMart Logo">
                 </div>
+                <p>Promoting ethical commerce since 2025.</p>
+                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
-            
             <div class="footerLinks">
-                <h4>Company</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="blog.html">Impact Blog</a></li>
-                </ul>
-            </div>
-
-            <div class="footerLinks">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="about.html#contact">Contact Us</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Terms & Privacy</a></li>
                 </ul>
             </div>
         </div>

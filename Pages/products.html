@@ -3,17 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop EcoMart - Sustainable bamboo and organic products.">
+    <meta name="description" content="EcoMart - Sustainable Product Catalog">
     <title>Shop | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        /* INTERNAL CSS: SHOP-SPECIFIC GRID MATH */
+        .shopHeader {
+            padding: 60px 0;
+            text-align: center;
+            background: #f4fdf4;
+        }
+
+        .productContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        /* ALIGNMENT LOCK: Fixes the 'mess-up' by ensuring uniform card behavior */
+        .productCardLarge {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* Forces cards in the same row to equal height */
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .imgContainer {
+            width: 100%;
+            height: 250px; /* Reduced fixed height for better proportion */
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .imgContainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the space without distortion */
+        }
+
+        .priceTag {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2e7d32;
+            margin: 10px 0;
+        }
+
+        .originalPrice {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 1100px) {
+            .productContainer { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .productContainer { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logoContainer">
-            <a href="../index.html">
-                <img src="../Assets/SampleLogo.svg" alt="EcoMart Logo">
-            </a>
-        </div>
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+                <img src="../Assets/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -25,76 +87,112 @@
         </nav>
     </header>
 
-    <main class="container reveal">
-        <section style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; color: #2e7d32; margin-bottom: 10px;">Our Sustainable Collection</h1>
-            <p>Ethically sourced, plastic-free essentials curated for your eco-friendly lifestyle.</p>
+    <main class="reveal">
+        <section class="shopHeader">
+            <div class="container">
+                <h1 style="color: #2e7d32; font-size: 2.5rem;">Sustainable Essentials</h1>
+                <p>Ethically sourced bamboo and hemp products for a greener Nepal.</p>
+            </div>
         </section>
 
-        <div class="grid">
-            <article class="previewBox">
-                <div style="background: #f9f9f9; height: 220px; border-radius: 4px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                    <img src="../Assets/bottle.jpg" alt="Bamboo Bottle" style="max-height: 100%; border-radius: 4px;">
-                </div>
-                <h3 style="margin-bottom: 10px;">Bamboo Water Bottle</h3>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Insulated stainless steel with a natural bamboo exterior. 100% BPA free.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 1.25rem; font-weight: 700;">$24.99</span>
-                    <a href="#" class="btnPrimary" style="padding: 10px 20px; font-size: 0.85rem;">Add to Cart</a>
-                </div>
-            </article>
+        <section class="container">
+            <div class="productContainer">
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/bambooWaterBottle.png" alt="Bamboo Water Bottle">
+                        </div>
+                        <h3>Bamboo Water Bottle</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 1,500</span>Rs. 1,200
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
 
-            <article class="previewBox">
-                <div style="background: #f9f9f9; height: 220px; border-radius: 4px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                    <img src="../Assets/tote.jpg" alt="Organic Tote Bag" style="max-height: 100%; border-radius: 4px;">
-                </div>
-                <h3 style="margin-bottom: 10px;">Organic Cotton Tote</h3>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Heavy-duty GOTS certified cotton. The perfect plastic-bag replacement.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 1.25rem; font-weight: 700;">$12.50</span>
-                    <a href="#" class="btnPrimary" style="padding: 10px 20px; font-size: 0.85rem;">Add to Cart</a>
-                </div>
-            </article>
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/hempLaptopBag.jpg" alt="Hemp Laptop Bag">
+                        </div>
+                        <h3>Hemp Laptop Bag</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 4,200</span>Rs. 3,500
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
 
-            <article class="previewBox">
-                <div style="background: #f9f9f9; height: 220px; border-radius: 4px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                    <img src="../Assets/cutlery.jpg" alt="Bamboo Cutlery Set" style="max-height: 100%; border-radius: 4px;">
-                </div>
-                <h3 style="margin-bottom: 10px;">Bamboo Cutlery Set</h3>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Portable 5-piece set with a linen travel pouch. Lightweight and durable.</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 1.25rem; font-weight: 700;">$18.00</span>
-                    <a href="#" class="btnPrimary" style="padding: 10px 20px; font-size: 0.85rem;">Add to Cart</a>
-                </div>
-            </article>
-        </div>
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/hempYogaMat.jpg" alt="Hemp Yoga Mat">
+                        </div>
+                        <h3>Hemp Yoga Mat</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 5,000</span>Rs. 4,200
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
+
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/bambooToothbrush.jpg" alt="Bamboo Toothbrush">
+                        </div>
+                        <h3>Bamboo Toothbrush (Set of 4)</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 800</span>Rs. 600
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
+
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/hempWallet.jpg" alt="Hemp Wallet">
+                        </div>
+                        <h3>Hemp Bi-fold Wallet</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 1,200</span>Rs. 950
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
+
+                <article class="productCardLarge">
+                    <div>
+                        <div class="imgContainer">
+                            <img src="../Assets/bambooCutlery.jpg" alt="Bamboo Cutlery">
+                        </div>
+                        <h3>Bamboo Cutlery Set</h3>
+                        <p class="priceTag">
+                            <span class="originalPrice">Rs. 900</span>Rs. 750
+                        </p>
+                    </div>
+                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">Add to Cart</button>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footerGrid">
             <div class="footerBrand">
-                <h2>EcoMart</h2>
-                <p>If it's Green Day, it's a Good Day. Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons">
-                    <span>📸</span> <span>🔗</span> <span>𝕏</span>
+                <div class="logoContainer" style="width: 128px; margin-bottom: 15px;">
+                    <img src="../Assets/logo.svg" alt="EcoMart Logo">
                 </div>
+                <p>Promoting ethical commerce since 2025.</p>
+                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
-            
             <div class="footerLinks">
-                <h4>Company</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="blog.html">Impact Blog</a></li>
-                </ul>
-            </div>
-
-            <div class="footerLinks">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="about.html#contact">Contact Us</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Terms & Privacy</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
         </div>
