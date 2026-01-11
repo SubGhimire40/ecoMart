@@ -30,6 +30,12 @@
         display: block;
     }
 
+    .altLogoContainer img {
+        height: 100px;
+        width: auto;
+        display: block;
+    }
+
     nav ul {
         display: flex;
         list-style: none;
