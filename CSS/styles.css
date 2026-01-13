@@ -129,7 +129,7 @@
         justify-content: space-between;
         align-items: flex-start;
         max-width: 1200px;
-        margin:  auto 40px;
+        margin: 0 auto 40px;
         gap: 50px;
     }
 
