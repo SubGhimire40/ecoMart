@@ -4,12 +4,14 @@
     }
 
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "DM Sans", sans-serif;
         color: #333;
         line-height: 1.6;
-        overflow-x: hidden;
     }
 
+    h1, h2, h3 {
+         font-family: 'Josefin Sans';
+    }
     
     header {
         display: flex;
@@ -143,7 +145,7 @@
     }
 
     .footerLinks {
-        flex: 1; 
+        margin-right: 40px;
     }
 
     .footerLinks h4 {
