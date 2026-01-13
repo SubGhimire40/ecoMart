@@ -9,11 +9,11 @@
     <style>
         /* INTERNAL CSS: PAGE-SPECIFIC LAYOUT MATH */
         .indexBanner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Assets/landingImage.jpg') center/cover no-repeat;
+            background:  url('Assets/landingImage.jpg'); 
             min-height: 85vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            
             text-align: center;
             color: white;
             border-bottom: 5px solid #2F6F3E;
@@ -33,17 +33,17 @@
             border-radius: 16px;
             padding: 20px;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid #f0f0f0;
         }
 
         .productCardLarge:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(46, 125, 50, 0.12);
+            transition: 0.4s;
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px #2e7d321f;
             border-color: #2F6F3E;
         }
 
-        .imgContainer {
+        .ProductImg {
             width: 100%;
             height: 380px;
             border-radius: 12px;
@@ -52,14 +52,14 @@
             margin-bottom: 20px;
         }
 
-        .imgContainer img {
+        .ProductImg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .productCardLarge:hover .imgContainer img {
+        .productCardLarge:hover .ProductImg img {
             transform: scale(1.05);
         }
 
@@ -79,28 +79,24 @@
             cursor: pointer;
         }
 
-        .iconWrapperSmall {
+        .iconPreview {
             background: #EEF6F1; 
             height: 120px; 
             border-radius: 4px; 
             margin-bottom: 15px; 
             display: flex; 
             align-items: center; 
-            justify-content: center;
+           justify-content: center;
             font-size: 2.5rem;
         }
 
-        @media (max-width: 1100px) {
-            main section .grid { grid-template-columns: repeat(2, 1fr); }
-            .productRow { flex-direction: column; align-items: center; }
-            .imgContainer { height: 300px; }
-        }
+        
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+            <div class="logoContainer" style="width: 128px; ">
                 <img src="Assets/logo/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
@@ -127,7 +123,7 @@
             </div>
         </section>
 
-        <section style="padding: 100px 0; background-color: #f9fdf9;">
+        <section style="padding: 100px ; background-color: #f9fdf9;">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 60px;">
                     <h2 style="color: #2F6F3E; font-size: 2.5rem;">Featured Essentials</h2>
@@ -135,21 +131,21 @@
                 </div>
                 <div class="productRow">
                     <article class="productCardLarge">
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="Assets/bambooWaterBottle.png" alt="Bamboo Water Bottle">
                         </div>
                         <h3>Bamboo Water Bottle</h3>
                         <p style="color: #2F6F3E; font-weight: 700; font-size: 1.8rem;">Rs. 1,200</p>
                     </article>
                     <article class="productCardLarge">
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="Assets/hempLaptopBag.jpg" alt="Hemp Laptop Bag">
                         </div>
                         <h3>Hemp Laptop Bag</h3>
                         <p style="color: #2F6F3E; font-weight: 700; font-size: 1.8rem;">Rs. 3,500</p>
                     </article>
                     <article class="productCardLarge">
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="Assets/hempYogaMat.jpg" alt="Hemp Yoga Mat">
                         </div>
                         <h3>Hemp Yoga Mat</h3>
@@ -166,7 +162,7 @@
                     <a href="Pages/products.html" style="text-decoration: none; color: inherit;">
                         <article class="previewBox">
                             <div>
-                                <div class="iconWrapperSmall">🛒</div>
+                                <div class="iconPreview">🛒</div>
                                 <h4>Shop</h4>
                                 <p style="font-size: 0.9rem; color: #666;">Full catalog.</p>
                             </div>
@@ -176,7 +172,7 @@
                     <a href="Pages/blog.html" style="text-decoration: none; color: inherit;">
                         <article class="previewBox">
                             <div>
-                                <div class="iconWrapperSmall">📄</div>
+                                <div class="iconPreview">📄</div>
                                 <h4>Blog</h4>
                                 <p style="font-size: 0.9rem; color: #666;">Impact insights.</p>
                             </div>
@@ -186,7 +182,7 @@
                     <a href="Pages/research.html" style="text-decoration: none; color: inherit;">
                         <article class="previewBox">
                             <div>
-                                <div class="iconWrapperSmall">📊</div>
+                                <div class="iconPreview">📊</div>
                                 <h4>Research</h4>
                                 <p style="font-size: 0.9rem; color: #666;">Tech strategy.</p>
                             </div>
@@ -196,7 +192,7 @@
                     <a href="Pages/about.html" style="text-decoration: none; color: inherit;">
                         <article class="previewBox">
                             <div>
-                                <div class="iconWrapperSmall">👥</div>
+                                <div class="iconPreview">👥</div>
                                 <h4>About</h4>
                                 <p style="font-size: 0.9rem; color: #666;">Meet the team.</p>
                             </div>
@@ -215,7 +211,6 @@
                     <img src="Assets/logo/logo-alt.svg" alt="EcoMart Logo">
                 </div>
                 <p>Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
             <div class="footerLinks">
                 <h4>Quick Links</h4>

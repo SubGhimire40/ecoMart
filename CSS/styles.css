@@ -1,6 +1,5 @@
     * {
-        margin: 0;
-        padding: 0;
+       
         box-sizing: border-box;
     }
 
@@ -16,7 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 5%;
+        padding: 10px;
         background: #FAFAF8;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         position: sticky;
@@ -74,7 +73,7 @@
         border-radius: 4px;
         text-decoration: none;
         font-weight: 700;
-        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: 0.4s ;
     }
 
     .btnSecondary {
@@ -130,7 +129,7 @@
         justify-content: space-between;
         align-items: flex-start;
         max-width: 1200px;
-        margin: 0 auto 40px;
+        margin:  auto 40px;
         gap: 50px;
     }
 

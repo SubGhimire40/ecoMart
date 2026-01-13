@@ -9,7 +9,7 @@
     <style>
         /* INTERNAL CSS: SHOP-SPECIFIC GRID MATH */
         .shopHeader {
-            padding: 60px 0;
+            padding: 60px ;
             text-align: center;
             background: #EEF6F1;
         }
@@ -18,7 +18,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            padding: 60px 0;
+            padding: 60px ;
         }
 
         /* ALIGNMENT LOCK: Fixes the 'mess-up' by ensuring uniform card behavior */
@@ -34,14 +34,14 @@
             transition: transform 0.3s ease;
         }
 
-        .imgContainer {
+        .ProductImg {
             width: 100%;
             height: 250px; /* Reduced fixed height for better proportion */
             overflow: hidden;
             margin-bottom: 15px;
         }
 
-        .imgContainer img {
+        .ProductImg img {
             width: 100%;
             height: 100%;
             object-fit: cover; /* Ensures images fill the space without distortion */
@@ -51,7 +51,7 @@
             font-size: 1.4rem;
             font-weight: 700;
             color: #2F6F3E;
-            margin: 10px 0;
+            margin: 10px ;
         }
 
         .originalPrice {
@@ -61,18 +61,13 @@
             margin-right: 10px;
         }
 
-        @media (max-width: 1100px) {
-            .productContainer { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .productContainer { grid-template-columns: 1fr; }
-        }
+        
     </style>
 </head>
 <body>
     <header>
         <a href="../index.html">
-            <div class="logoContainer" style="width: 128px; flex-shrink: 0;">
+            <div class="logoContainer" style="width: 128px; ">
                 <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
@@ -99,7 +94,7 @@
             <div class="productContainer">
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/bambooWaterBottle.png" alt="Bamboo Water Bottle">
                         </div>
                         <h3>Bamboo Water Bottle</h3>
@@ -112,7 +107,7 @@
 
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/hempLaptopBag.jpg" alt="Hemp Laptop Bag">
                         </div>
                         <h3>Hemp Laptop Bag</h3>
@@ -125,7 +120,7 @@
 
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/hempYogaMat.jpg" alt="Hemp Yoga Mat">
                         </div>
                         <h3>Hemp Yoga Mat</h3>
@@ -138,7 +133,7 @@
 
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/bambooToothbrush.jpg" alt="Bamboo Toothbrush">
                         </div>
                         <h3>Bamboo Toothbrush (Set of 4)</h3>
@@ -151,7 +146,7 @@
 
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/hempCottonFabricTop.jpg" alt="Hemp-Cotton Top">
                         </div>
                         <h3>Hemp-Cotton Top</h3>
@@ -164,7 +159,7 @@
 
                 <article class="productCardLarge">
                     <div>
-                        <div class="imgContainer">
+                        <div class="ProductImg">
                             <img src="../Assets/bambooCutlery.jpg" alt="Bamboo Cutlery">
                         </div>
                         <h3>Bamboo Cutlery Set</h3>
@@ -185,7 +180,6 @@
                     <img src="../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
                 </div>
                 <p>Promoting ethical commerce since 2025.</p>
-                <div class="socialIcons"><span>📸</span> <span>🔗</span> <span>𝕏</span></div>
             </div>
             <div class="footerLinks">
                 <h4>Quick Links</h4>
