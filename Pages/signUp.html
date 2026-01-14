@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMart - Create an Account">
+    <title>Sign Up | EcoMart</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        body { 
+            margin: 0; 
+            min-height: 100vh;
+            background-color: #EEF6F1; 
+        }
+
+        .authWrapper {
+            display: flex;
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .signupContainer {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .authTabs { margin-bottom: 30px; }
+        .authTabs a { 
+            text-decoration: none; 
+            color: #888; 
+            margin-right: 20px; 
+            font-weight: bold; 
+        }
+        .authTabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
+
+        .signupContainer h2 { 
+            margin: 0 0 10px 0; 
+            font-size: 28px; 
+        }
+        .subtitle { 
+            color: #666; 
+            font-size: 14px; 
+            margin-bottom: 30px; 
+        }
+
+        .signupContainer input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        
+
+        .decorationImg {
+            flex: 1;
+            background: url('../Assets/lush-green-bamboo-forest.jpg') center/cover no-repeat;
+            min-height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../index.html">
+        <div class="logoContainer" style="width: 128px;">
+            <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
+        </div>
+    </a>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="authWrapper">
+        <div class="signupContainer">
+            <div class="authTabs">
+                <a href="login.html">Log In</a>
+                <a href="#" class="active">Sign Up</a>
+            </div>
+
+            <h2>Join EcoMart Today!</h2>
+            <p class="subtitle">Start your journey toward sustainable living.</p>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="E-mail Address" required>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                
+                <button type="submit" class="btnPrimary" >Create Account</button>
+            </form>
+        </div>
+
+        <div class="decorationImg"></div>
+    </div>
+</main>
+
+<footer>
+    <div class="footerGrid">
+        <div class="footerBrand">
+            <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
+                <img src="../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
+            </div>
+            <p>Promoting ethical commerce since 2025.</p>
+        </div>
+        <div class="footerLinks">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

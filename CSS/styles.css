@@ -17,9 +17,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px ;
         background: #FAFAF8;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         position: sticky;
         top: 0;
         z-index: 1000;
