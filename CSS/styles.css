@@ -3,6 +3,39 @@
         box-sizing: border-box;
     }
 
+    /* Regular */
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../fonts/JosefinSans/josefinSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../fonts/JosefinSans/josefinSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../fonts/JosefinSans/josefinSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../fonts/JosefinSans/josefinSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
     body {
         font-family: "DM Sans", sans-serif;
         color: #333;
