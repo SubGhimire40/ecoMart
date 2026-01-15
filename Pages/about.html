@@ -7,37 +7,84 @@
     <title>About Us | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* INTERNAL CSS: PORTFOLIO SPECIFICS */
-        .skillBadge {
+        /* Small green boxes for skills */
+        .skillTag {
             display: inline-block;
             background: #EEF6F1;
             color: #2F6F3E;
             padding: 4px 10px;
             border-radius: 4px;
-            font-size: 0.75rem;
-            margin: 5px 5px 0 0 ;
+            font-size: 12px;
+            margin: 5px 5px 0 0;
             font-weight: 600;
         }
         
-        .bio {
+        /* The text describing the person */
+        .memberBio {
             margin-top: 15px;
-            font-size: 0.85rem;
+            font-size: 13.6px;
             line-height: 1.4;
         }
 
-        .formContainer {
+        /* The big box for the message form */
+        .contactBlock {
             background: #EEF6F1;
-            padding: 4rem 2rem;
+            padding: 64px 32px;
             border-radius: 12px;
-            margin-top: 4rem;
+            margin-top: 64px;
             border: 1px solid #e0e0e0;
+        }
+
+        /* Spacing for the skill boxes */
+        .tagList {
+            margin: 15px 0;
+        }
+
+        /* The area showing the email link */
+        .emailInfo {
+            margin-top: 20px; 
+            padding-top: 15px; 
+            border-top: 1px solid #eee; 
+            font-size: 13.6px;
+        }
+
+        .emailInfo a {
+            color: #2F6F3E; 
+            text-decoration: none; 
+            font-weight: 600;
+        }
+
+        /* Stacked rows for the form inputs */
+        .formRow {
+            display: grid; 
+            gap: 8px;
+        }
+
+        .formRow label {
+            font-weight: 600;
+        }
+
+        .formRow input, .formRow select, .formRow textarea {
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        /* Small loud text for job titles */
+        .labelSmall {
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 12px; 
+            color: #666; 
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
     <header>
-            <a href="../index.html">
-            <div class="logoContainer" style="width: 128px; ">
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px;">
                 <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
@@ -53,102 +100,101 @@
     </header>
 
     <main class="container reveal">
+        
         <section style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; color: #2F6F3E; margin-bottom: 10px;">Meet Our Team</h1>
-            <p>The innovators driving sustainable digital commerce through technical excellence.</p>
+            <h1 style="font-size: 40px; color: #2F6F3E; margin-bottom: 10px;">Meet Our Team</h1>
         </section>
 
         <div class="grid">
+            
             <article class="previewBox" style="border-top: 5px solid #2F6F3E;">
-                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; color: #666; letter-spacing: 1px;">Team Leader</span>
-                <h3 style="margin: 10px ;">Subham Ghimire</h3>
-                <p class="bio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Background:</strong>7 and System Architecture.</p>
-                <div style="margin: 15px ;">
-                    <span class="skillBadge">System Design</span>
-                    <span class="skillBadge">Project Management</span>
+                <span class="labelSmall">Team Leader</span>
+                <h3 style="margin: 10px 0;">Subham Ghimire</h3>
+                <p class="memberBio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Role:</strong> System Design and Project Coordination.</p>
+                <div class="tagList">
+                    <span class="skillTag">Project Management</span>
+                    <span class="skillTag">UI/UX & System Design</span>
                 </div>
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem;">
-                    <a href="mailto:subham.leader@ecomart.com" style="color: #2F6F3E; text-decoration: none; font-weight: 600;">subham.leader@ecomart.com</a>
-                </div>
-            </article>
-
-            <article class="previewBox">
-                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; color: #666; letter-spacing: 1px;">Frontend Developer</span>
-                <h3 style="margin: 10px ;">Bijendra Pratap Karki</h3>
-                <p class="bio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Background:</strong> Specializes in semantic HTML5 and responsive CSS layouts.</p>
-                <div style="margin: 15px ;">
-                    <span class="skillBadge">UI/UX Design</span>
-                    <span class="skillBadge">Responsive Web</span>
-                </div>
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem;">
-                    <a href="mailto:bijendra.dev@ecomart.com" style="color: #2F6F3E; text-decoration: none; font-weight: 600;">bijendra.dev@ecomart.com</a>
+                <div class="emailInfo">
+                    <a href="mailto:np01cp4a250054@islingtoncollege.edu.np">np01cp4a250054@islingtoncollege.edu.np</a>
                 </div>
             </article>
 
             <article class="previewBox">
-                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; color: #666; letter-spacing: 1px;">JS Specialist</span>
-                <h3 style="margin: 10px ;">Tulakshya Shrestha</h3>
-                <p class="bio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Background:</strong> Focused on interactive DOM manipulation and form validation logic.</p>
-                <div style="margin: 15px ;">
-                    <span class="skillBadge">JavaScript ES6</span>
-                    <span class="skillBadge">Problem Solving</span>
+                <span class="labelSmall">Frontend Developer</span>
+                <h3 style="margin: 10px 0;">Bijendra Pratap Karki</h3>
+                <p class="memberBio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Role:</strong> HTML and responsive CSS layouts.</p>
+                <div class="tagList">
+                    <span class="skillTag">UI/UX Design</span>
+                    <span class="skillTag">Responsive Web</span>
                 </div>
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem;">
-                    <a href="mailto:tulakshya.js@ecomart.com" style="color: #2F6F3E; text-decoration: none; font-weight: 600;">tulakshya.js@ecomart.com</a>
-                </div>
-            </article>
-
-            <article class="previewBox">
-                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; color: #666; letter-spacing: 1px;">Content Researcher</span>
-                <h3 style="margin: 10px ;">Rochit Tako</h3>
-                <p class="bio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Background:</strong> Expert in competitive market research and documentation.</p>
-                <div style="margin: 15px ;">
-                    <span class="skillBadge">Analysis</span>
-                    <span class="skillBadge">Technical Writing</span>
-                </div>
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem;">
-                    <a href="mailto:rochit.research@ecomart.com" style="color: #2F6F3E; text-decoration: none; font-weight: 600;">rochit.research@ecomart.com</a>
+                <div class="emailInfo">
+                    <a href="mailto:np01cp4a250055@islingtoncollege.edu.np">np01cp4a250055@islingtoncollege.edu.np</a>
                 </div>
             </article>
 
             <article class="previewBox">
-                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; color: #666; letter-spacing: 1px;">Graphic/Brand Designer</span>
-                <h3 style="margin: 10px ;">Sumi Rajkarnikar</h3>
-                <p class="bio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Background:</strong>Designed the logo, Brand identity & color palette, along with the research work for UI/UX Inspo. </p>
-                <div style="margin: 15px ;">
-                    <span class="skillBadge">Graphic Design</span>
-                    <span class="skillBadge">Productivity</span>
+                <span class="labelSmall">JavaScript Developer</span>
+                <h3 style="margin: 10px 0;">Tulakshya Shrestha</h3>
+                <p class="memberBio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Role:</strong> Focused on interactive DOM manipulation and form logic.</p>
+                <div class="tagList">
+                    <span class="skillTag">JavaScript</span>
+                    <span class="skillTag">Problem Solving</span>
                 </div>
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem;">
-                    <a href="mailto:sumi.qa@ecomart.com" style="color: #2F6F3E; text-decoration: none; font-weight: 600;">sumi.qa@ecomart.com</a>
+                <div class="emailInfo">
+                    <a href="mailto:np01cp4a250027@islingtoncollege.edu.np">np01cp4a250027@islingtoncollege.edu.np</a>
+                </div>
+            </article>
+
+            <article class="previewBox">
+                <span class="labelSmall">Content Researcher</span>
+                <h3 style="margin: 10px 0;">Rochit Tako</h3>
+                <p class="memberBio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Role:</strong> Market research & Blog.</p>
+                <div class="tagList">
+                    <span class="skillTag">Analysis</span>
+                    <span class="skillTag">Technical Writing</span>
+                </div>
+                <div class="emailInfo">
+                    <a href="mailto:np01cp4a250060@islingtoncollege.edu.np">np01cp4a250060@islingtoncollege.edu.np</a>
+                </div>
+            </article>
+
+            <article class="previewBox">
+                <span class="labelSmall">Graphic Designer</span>
+                <h3 style="margin: 10px 0;">Sumi Rajkarnikar</h3>
+                <p class="memberBio"><strong>Education:</strong> BSc (Hons) Computing<br><strong>Role:</strong> Architect of brand identity, logo design, and Product Design.</p>
+                <div class="tagList">
+                    <span class="skillTag">Graphic Design</span>
+                    <span class="skillTag">Product Design</span>
+                </div>
+                <div class="emailInfo">
+                    <a href="mailto:np01cp4a250041@islingtoncollege.edu.np">np01cp4a250041@islingtoncollege.edu.np</a>
                 </div>
             </article>
         </div>
 
-        <section class="formContainer" id="contact">
-            <h2 style="margin-bottom: 10px;">Send us an Inquiry</h2>
-            <p style="margin-bottom: 30px;">This functional form captures inquiries regarding our sustainable product line.</p>
-            
+        <section class="contactBlock" id="contact">
+            <h1 style="margin-bottom: 10px;">Send us an Inquiry</h1>
             <form id="contactForm" style="display: grid; gap: 20px; max-width: 600px;">
-                <div style="display: grid; gap: 8px;">
-                    <label style="font-weight: 600;">Full Name</label>
-                    <input type="text" name="fullName" placeholder="Enter your name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
+                <div class="formRow">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" placeholder="Enter your name" required>
                 </div>
-                <div style="display: grid; gap: 8px;">
-                    <label style="font-weight: 600;">Email Address</label>
-                    <input type="email" name="email" placeholder="example@email.com" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
+                <div class="formRow">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="example@email.com" required>
                 </div>
-                <div style="display: grid; gap: 8px;">
-                    <label style="font-weight: 600;">Subject</label>
-                    <select name="subject" style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;">
+                <div class="formRow">
+                    <label>Subject</label>
+                    <select name="subject">
                         <option value="product">Product Inquiry</option>
                         <option value="partnership">Business Partnership</option>
                         <option value="other">General Question</option>
                     </select>
                 </div>
-                <div style="display: grid; gap: 8px;">
-                    <label style="font-weight: 600;">Your Message</label>
-                    <textarea name="message" placeholder="How can we help?" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; height: 120px; font-family: inherit;"></textarea>
+                <div class="formRow">
+                    <label>Your Message</label>
+                    <textarea name="message" placeholder="How can we help?" required style="height: 120px; width: 1070px;"></textarea>
                 </div>
                 <button type="submit" class="btnPrimary" style="width: fit-content; cursor: pointer; border: none;">Submit Inquiry</button>
             </form>
@@ -170,7 +216,6 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    
                 </ul>
             </div>
         </div>

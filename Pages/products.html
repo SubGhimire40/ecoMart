@@ -7,26 +7,30 @@
     <title>Shop | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* INTERNAL CSS: SHOP-SPECIFIC GRID MATH */
+        /* Top header section of the shop with a light background to highlight the title */
         .shopHeader {
-            padding: 60px ;
+            padding: 60px;
             text-align: center;
             background: #EEF6F1;
         }
 
+        /* The grid system that organizes products into 3 equal columns */
         .productContainer {
             display: grid;
+            /* Creates 3 equal width columns that stay consistent */
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            padding: 60px ;
+            gap: 32px;
+            padding: 35px;
         }
 
-        /* ALIGNMENT LOCK: Fixes the 'mess-up' by ensuring uniform card behavior */
+        /* Card styling with an 'Alignment Lock' to keep all cards the same height */
         .productCardLarge {
             display: flex;
             flex-direction: column;
+            /* Pushes the button to the bottom even if text length varies */
             justify-content: space-between;
-            height: 100%; /* Forces cards in the same row to equal height */
+            /* Ensures all cards in a row stretch to the height of the tallest card */
+            height: 100%; 
             background: #FAFAF8;
             border: 1px solid #eee;
             border-radius: 8px;
@@ -34,40 +38,42 @@
             transition: transform 0.3s ease;
         }
 
+        /* Container that limits the height of product photos for a uniform look */
         .ProductImg {
             width: 100%;
-            height: 250px; /* Reduced fixed height for better proportion */
+            height: 250px; 
             overflow: hidden;
             margin-bottom: 15px;
         }
 
+        /* Ensures images fill their boxes without being stretched or squashed */
         .ProductImg img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures images fill the space without distortion */
+            object-fit: cover; 
         }
 
+        /* Text styling for the final selling price */
         .priceTag {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 18px; /* Converted from 1.15rem */
+            font-weight: 500;
             color: #2F6F3E;
-            margin: 10px ;
+            margin: 10px 0;
         }
 
+        /* Styling for the crossed-out original price to show savings */
         .originalPrice {
             text-decoration: line-through;
-            color: #999;
-            font-size: 1rem;
+            color: #c40000;
+            font-size: 14px; /* Converted from 0.85rem */
             margin-right: 10px;
         }
-
-        
     </style>
 </head>
 <body>
     <header>
         <a href="../index.html">
-            <div class="logoContainer" style="width: 128px; ">
+            <div class="logoContainer" style="width: 128px;">
                 <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
@@ -85,13 +91,14 @@
     <main class="reveal">
         <section class="shopHeader">
             <div class="container">
-                <h1 style="color: #2F6F3E; font-size: 2.5rem;">Sustainable Essentials</h1>
-                <p>Loacally sourced bamboo and hemp products for a greener Nepal.</p>
+                <h1 style="color: #2F6F3E; font-size: 40px;">Sustainable Essentials</h1>
+                <p>Locally sourced bamboo and hemp products for a greener Nepal.</p>
             </div>
         </section>
 
         <section class="container">
             <div class="productContainer">
+                
                 <article class="productCardLarge">
                     <div>
                         <div class="ProductImg">
@@ -99,10 +106,12 @@
                         </div>
                         <h3>Bamboo Water Bottle</h3>
                         <p class="priceTag">
-                            <span class="originalPrice">Rs. 1,500</span>Rs. 1,200
+                            <span class="originalPrice">Rs. 2,950</span>Rs. 1,200
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/bambooWaterBottle.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
 
                 <article class="productCardLarge">
@@ -112,10 +121,12 @@
                         </div>
                         <h3>Hemp Laptop Bag</h3>
                         <p class="priceTag">
-                            <span class="originalPrice">Rs. 4,200</span>Rs. 3,500
+                            <span class="originalPrice">Rs. 750</span>Rs. 250
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/hempLaptopBag.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
 
                 <article class="productCardLarge">
@@ -125,10 +136,12 @@
                         </div>
                         <h3>Hemp Yoga Mat</h3>
                         <p class="priceTag">
-                            <span class="originalPrice">Rs. 5,000</span>Rs. 4,200
+                            <span class="originalPrice">Rs. 5,350</span>Rs. 4,200
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/hempYogaMat.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
 
                 <article class="productCardLarge">
@@ -138,10 +151,12 @@
                         </div>
                         <h3>Bamboo Toothbrush (Set of 4)</h3>
                         <p class="priceTag">
-                            <span class="originalPrice">Rs. 800</span>Rs. 600
+                            <span class="originalPrice">Rs. 950</span>Rs. 600
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/bambooToothbrush.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
 
                 <article class="productCardLarge">
@@ -154,7 +169,9 @@
                             <span class="originalPrice">Rs. 2,200</span>Rs. 1,250
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/hempCottonFabricTop.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
 
                 <article class="productCardLarge">
@@ -167,8 +184,11 @@
                             <span class="originalPrice">Rs. 900</span>Rs. 750
                         </p>
                     </div>
-                    <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    <a href="../Pages/products/bambooCutlery.html">
+                        <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
+                    </a>
                 </article>
+
             </div>
         </section>
     </main>

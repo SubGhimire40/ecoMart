@@ -7,10 +7,11 @@
     <title>Home | EcoMart</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <style>
-        /* INTERNAL CSS: PAGE-SPECIFIC LAYOUT MATH */
+        /* Main landing area styling with a dark overlay to make text readable over the image */
         .indexBanner {
-            background-image:  url('Assets/landingImage.jpg'); 
+            background-image: url('Assets/landingImage.jpg'); 
             background-color: rgba(0, 0, 0, 0.5);
+            /* Darkens the background image so white text stands out clearly */
             background-blend-mode: darken;
             min-height: 85vh;
             display: flex;
@@ -20,7 +21,7 @@
             border-bottom: 5px solid #2F6F3E;
         }
 
-
+        /* Horizontal layout for the featured product cards */
         .productRow {
             display: flex;
             justify-content: center;
@@ -28,6 +29,7 @@
             padding: 20px 0;
         }
 
+        /* Large card container for featured products with a clean border */
         .productCardLarge {
             flex: 1;
             max-width: 400px;
@@ -38,13 +40,18 @@
             border: 1px solid #f0f0f0;
         }
 
+        /* Animation logic: grows the card and adds a shadow when the user hovers over it */
         .productCardLarge:hover {
+            /* Makes the growth animation smooth over half a second */
             transition: 0.5s;
+            /* Slightly enlarges the card */
             transform: scale(1.05);
+            /* Adds a soft green glow shadow for depth */
             box-shadow: 0 20px 40px #2e7d321f;
             border-color: #2F6F3E;
         }
 
+        /* Container that maintains a consistent size for product images */
         .ProductImg {
             width: 100%;
             height: 380px;
@@ -54,24 +61,30 @@
             margin-bottom: 20px;
         }
 
+        /* Ensures the actual product photo fills the container perfectly without squishing */
         .ProductImg img {
             width: 100%;
             height: 100%;
+            /* Crops the image to fill space while maintaining its shape */
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
+        /* Zooms in on the photo slightly when the parent card is hovered */
         .productCardLarge:hover .ProductImg img {
             transform: scale(1.05);
         }
 
+        /* Grid layout that organizes the platform section into 4 equal columns */
         main section .grid {
             display: grid;
+            /* Splits the row into 4 equal parts */
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-top: 40px;
         }
 
+        /* Box styling for the category previews with a colored top-border accent */
         .previewBox {
             display: flex;
             flex-direction: column;
@@ -81,6 +94,7 @@
             cursor: pointer;
         }
 
+        /* Small decorative box to hold the icons (cart, blog, etc.) */
         .iconPreview {
             background: #EEF6F1; 
             height: 120px; 
@@ -88,11 +102,9 @@
             margin-bottom: 15px; 
             display: flex; 
             align-items: center; 
-           justify-content: center;
-            font-size: 2.5rem;
+            justify-content: center;
+            font-size: 40px; /* Converted from 2.5rem */
         }
-
-        
     </style>
 </head>
 <body>
@@ -116,8 +128,8 @@
     <main>
         <section class="indexBanner">
             <div class="container">
-                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Live Sustainably, Shop Consciously</h1>
-                <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto;">Premium bamboo and Himalayan hemp essentials curated for Nepal.</p>
+                <h1 style="font-size: 56px; margin-bottom: 20px;">Live Sustainably, Shop Consciously</h1>
+                <p style="font-size: 22px; max-width: 800px; margin: 0 auto;">Premium bamboo and Himalayan hemp essentials curated for Nepal.</p>
                 <div class="ctaWrapper">
                     <a href="Pages/products.html" class="btnPrimary">Browse Products</a>
                     <a href="Pages/about.html" class="btnSecondary">Our Mission</a>
@@ -128,7 +140,7 @@
         <section style="padding: 100px ; background-color: #f9fdf9;">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 60px;">
-                    <h2 style="color: #2F6F3E; font-size: 2.5rem;">Featured Essentials</h2>
+                    <h2 style="color: #2F6F3E; font-size: 40px;">Featured Essentials</h2>
                     <p style="color: #666;">Top-rated sustainable items.</p>
                 </div>
                 <div class="productRow">
@@ -137,21 +149,21 @@
                             <img src="Assets/bambooWaterBottle.png" alt="Bamboo Water Bottle">
                         </div>
                         <h3>Bamboo Water Bottle</h3>
-                        <p style="color: #2F6F3E; font-weight: 700; font-size: 1.8rem;">Rs. 1,200</p>
+                        <p style="color: #2F6F3E; font-weight: 700; font-size: 29px;">Rs. 1,200</p>
                     </article>
                     <article class="productCardLarge">
                         <div class="ProductImg">
                             <img src="Assets/hempLaptopBag.jpg" alt="Hemp Laptop Bag">
                         </div>
                         <h3>Hemp Laptop Bag</h3>
-                        <p style="color: #2F6F3E; font-weight: 700; font-size: 1.8rem;">Rs. 3,500</p>
+                        <p style="color: #2F6F3E; font-weight: 700; font-size: 29px;">Rs. 3,500</p>
                     </article>
                     <article class="productCardLarge">
                         <div class="ProductImg">
                             <img src="Assets/hempYogaMat.jpg" alt="Hemp Yoga Mat">
                         </div>
                         <h3>Hemp Yoga Mat</h3>
-                        <p style="color: #2F6F3E; font-weight: 700; font-size: 1.8rem;">Rs. 4,200</p>
+                        <p style="color: #2F6F3E; font-weight: 700; font-size: 29px;">Rs. 4,200</p>
                     </article>
                 </div>
             </div>
@@ -166,7 +178,7 @@
                             <div>
                                 <div class="iconPreview">🛒</div>
                                 <h4>Shop</h4>
-                                <p style="font-size: 0.9rem; color: #666;">Full catalog.</p>
+                                <p style="font-size: 14px; color: #666;">Full catalog.</p>
                             </div>
                             <span style="display: block; margin-top: 10px; color: #2F6F3E; font-weight: 700;">View →</span>
                         </article>
@@ -176,7 +188,7 @@
                             <div>
                                 <div class="iconPreview">📄</div>
                                 <h4>Blog</h4>
-                                <p style="font-size: 0.9rem; color: #666;">Impact insights.</p>
+                                <p style="font-size: 14px; color: #666;">Impact insights.</p>
                             </div>
                             <span style="display: block; margin-top: 10px; color: #2F6F3E; font-weight: 700;">View →</span>
                         </article>
@@ -186,7 +198,7 @@
                             <div>
                                 <div class="iconPreview">📊</div>
                                 <h4>Research</h4>
-                                <p style="font-size: 0.9rem; color: #666;">Tech strategy.</p>
+                                <p style="font-size: 14px; color: #666;">Tech strategy.</p>
                             </div>
                             <span style="display: block; margin-top: 10px; color: #2F6F3E; font-weight: 700;">View →</span>
                         </article>
@@ -196,7 +208,7 @@
                             <div>
                                 <div class="iconPreview">👥</div>
                                 <h4>About</h4>
-                                <p style="font-size: 0.9rem; color: #666;">Meet the team.</p>
+                                <p style="font-size: 14px; color: #666;">Meet the team.</p>
                             </div>
                             <span style="display: block; margin-top: 10px; color: #2F6F3E; font-weight: 700;">View →</span>
                         </article>
@@ -221,7 +233,6 @@
                     <li><a href="Pages/blog.html">Blog</a></li>
                     <li><a href="Pages/research.html">Research</a></li>
                     <li><a href="Pages/about.html">About Us</a></li>
-                    
                 </ul>
             </div>
         </div>

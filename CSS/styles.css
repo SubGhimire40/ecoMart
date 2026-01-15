@@ -1,226 +1,227 @@
-    * {
-       
-        box-sizing: border-box;
-    }
-
-    /* Regular */
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../fonts/JosefinSans/josefinSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* Universal reset to ensure padding and borders do not affect element width */
+* {
+    box-sizing: border-box;
 }
 
-/* SemiBold */
+/* Load custom heading fonts */
 @font-face {
-  font-family: "Josefin Sans";
-  src: url("../fonts/JosefinSans/josefinSans-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans/josefinSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* Bold */
 @font-face {
-  font-family: "Josefin Sans";
-  src: url("../fonts/JosefinSans/josefinSans-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans/josefinSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
 }
 
-/* Italic */
 @font-face {
-  font-family: "Josefin Sans";
-  src: url("../fonts/JosefinSans/josefinSans-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans/josefinSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
 }
 
-    body {
-        font-family: "DM Sans", sans-serif;
-        color: #333;
-        line-height: 1.6;
-    }
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans/josefinSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
 
-    h1, h2, h3 {
-         font-family: 'Josefin Sans';
-    }
-    
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 10px ;
-        background: #FAFAF8;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+/* Base styles for the entire website */
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
 
-    .logoContainer img {
-        height: 45px;
-        width: auto;
-        display: block;
-    }
+h1, h2, h3, h4 {
+     font-family: 'Josefin Sans';
+}
 
-    .altLogoContainer img {
-        height: 100px;
-        width: auto;
-        display: block;
-    }
+/* Navigation bar that stays fixed at the top of the screen */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #FAFAF8;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    nav ul {
-        display: flex;
-        list-style: none;
-        gap: 2.5rem;
-    }
+/* Standard sizing for the main logo */
+.logoContainer img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
 
-    nav ul li a {
-        text-decoration: none;
-        color: #2F6F3E;
-        font-weight: 600;
-        transition: 0.3s ease;
-    }
+/* Larger sizing for the alternative logo used in the footer */
+.altLogoContainer img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
 
-    nav ul li a.active {
-        border-bottom: 2px solid #2F6F3E;
-    }
+/* Horizontal list layout for navigation links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px; 
+}
 
-    /* HERO & CTA WRAPPER */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
+nav ul li a {
+    text-decoration: none;
+    color: #5c6e61;
+    font-weight: 360;
+}
 
-    .ctaWrapper {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 30px;
-    }
+/* Highlight style for the current active page link */
+nav ul li a.active {
+    color: #2F6F3E;
+    font-weight: 600;
+}
 
-    .btnPrimary {
-        background: #1F2933; 
-        color: #FAFAF8;
-        padding: 14px 28px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: 0.4s ;
-    }
+/* Centralized content wrapper used across all pages */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px; 
+}
 
-    .btnSecondary {
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(5px);
-        color: #FAFAF8;
-        padding: 14px 28px;
-        border: 1px solid #FAFAF8;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: 0.3s ease;
-    }
+/* Horizontal alignment for call-to-action buttons */
+.ctaWrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
 
-    .btnPrimary:hover { 
-        transform: scale(1.05); 
-        background: #333; 
-    }
-    .btnSecondary:hover { 
-        background: #FAFAF8; 
-        color: #1F2933; 
-    }
+/* Dark themed primary action button */
+.btnPrimary {
+    background: #1F2933; 
+    color: #FAFAF8;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.4s;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
+/* Transparent themed secondary action button */
+.btnSecondary {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: #FAFAF8;
+    padding: 14px 28px;
+    border: 1px solid #FAFAF8;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
 
-    .previewBox {
-        padding: 40px;
-        background: #FAFAF8;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* Hover effect for buttons to provide visual feedback */
+.btnPrimary:hover { 
+    transform: scale(1.05); 
+    background: #333; 
+}
 
-    .previewBox:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
+.btnSecondary:hover { 
+    background: #FAFAF8; 
+    color: #1F2933; 
+}
 
+/* Auto-responsive grid system for cards and team members */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
+/* Styling for content boxes with a lift-up effect on hover */
+.previewBox {
+    padding: 40px;
+    background: #FAFAF8;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    footer {
-        background: #FAFAF8;
-        padding: 60px 5% 20px;
-        border-top: 1px solid #eee;
-    }
+.previewBox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 
-    .footerGrid {
-        display: flex; 
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 1200px;
-        margin: 0 auto 40px;
-        gap: 50px;
-    }
+/* Global footer styling */
+footer {
+    background: #FAFAF8;
+    padding: 60px 5% 20px;
+    border-top: 1px solid #eee;
+}
 
-    .footerBrand {
-        flex: 2; 
-    }
+/* Layout for footer columns */
+.footerGrid {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    gap: 50px;
+}
 
-    .footerBrand h2 {
-        color: #2F6F3E;
-        margin-bottom: 15px;
-    }
+.footerBrand {
+    flex: 2; 
+}
 
-    .footerLinks {
-        margin-right: 40px;
-    }
+.footerBrand h2 {
+    color: #2F6F3E;
+    margin-bottom: 15px;
+}
 
-    .footerLinks h4 {
-        margin-bottom: 20px;
-        font-size: 1rem;
-        color: #1F2933;
-    }
+.footerLinks {
+    margin-right: 40px;
+}
 
-    .footerLinks ul {
-        list-style: none;
-    }
+.footerLinks h4 {
+    margin-bottom: 20px;
+    font-size: 16px; 
+    color: #1F2933;
+}
 
-    .footerLinks li {
-        margin-bottom: 10px;
-    }
+.footerLinks ul {
+    list-style: none;
+    padding: 0;
+}
 
-    .footerLinks a {
-        text-decoration: none;
-        color: #666;
-        font-size: 0.9rem;
-        transition: 0.3s;
-    }
+.footerLinks li {
+    margin-bottom: 10px;
+}
 
-    .footerLinks a:hover {
-        color: #2F6F3E;
-    }
+.footerLinks a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14.4px; 
+    transition: 0.3s;
+}
 
-    .socialIcons {
-        margin-top: 20px;
-        display: flex;
-        gap: 15px;
-        font-size: 1.2rem;
-    }
+.footerLinks a:hover {
+    color: #2F6F3E;
+}
 
-    .footerBottom {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid #eee;
-        color: #999;
-        font-size: 0.85rem;
-    }
-
-    
+/* Bottom copyright bar */
+.footerBottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 13.6px; 
+}

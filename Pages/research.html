@@ -6,22 +6,25 @@
     <meta name="description" content="EcoMart - Research and Analysis of Web Components">
     <title>Research | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+
     <style>
-        /* INTERNAL CSS: RESEARCH TABLE MATH */
+        /* Banner */
         .researchBanner {
             padding: 60px 0;
             text-align: center;
             background: #EEF6F1;
         }
 
+        /* Table */
         .researchTable {
             width: 100%;
             border-collapse: collapse;
-            margin: 40px ;
+            margin: 40px 0;
             background: #FAFAF8;
         }
 
-        .researchTable th, .researchTable td {
+        .researchTable th,
+        .researchTable td {
             border: 1px solid #ddd;
             padding: 15px;
             text-align: left;
@@ -34,113 +37,210 @@
             font-weight: 700;
         }
 
-        .researchTable tr:{ background-color: #f9f9f9; }
+        .researchTable tr {
+            background-color: #f9f9f9;
+        }
 
+        /* Research Objective Box */
         .researchConclusion {
             padding: 25px;
             background: #fafafa;
             border-left: 5px solid #2F6F3E;
             margin-bottom: 40px;
         }
+
+        /* Blog-style images */
+        .blogImage {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #EEF6F1;
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
     </style>
 </head>
+
 <body>
-    <header>
-        <a href="../index.html">
-            <div class="logoContainer" style="width: 128px; ">
-                <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
+<header>
+    <a href="../index.html">
+        <div class="logoContainer" style="width: 128px;">
+            <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
+        </div>
+    </a>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main >
+
+    <!-- Banner -->
+    <section class="researchBanner">
+        <div class="container">
+            <h1 style="color:#2F6F3E; font-size:48px;">RESEARCH SECTION</h1>
+            <p>Comparing EcoMart’s design with popular e-commerce websites.</p>
+        </div>
+    </section>
+
+    <section class="container" style="padding:40px;">
+
+        <!-- Research Objective -->
+        <div class="researchConclusion">
+            <h3>Research Objective</h3>
+            <p>
+                The main objective of this research is to study how different e-commerce websites design their layouts and user interfaces.
+                Local platforms like Daraz and global websites such as Amazon, Apple, and EcoMart Malaysia are compared to see how EcoMart can improve its design.
+            </p>
+        </div>
+
+        <!-- Research Table -->
+        <table class="researchTable">
+            <tr>
+                <th>Reference Website</th>
+                <th>Component Investigated</th>
+                <th>EcoMart’s Adaptation</th>
+            </tr>
+
+            <tr>
+                <td><strong>EcoMart Malaysia</strong><br>(ecomart.com.my)</td>
+                <td>Branding and Header Navigation</td>
+                <td>EcoMart (Nepal) follows a similar eco-friendly design but keeps the navigation simpler and easier to understand.</td>
+            </tr>
+
+            <tr>
+                <td><strong>Daraz Nepal</strong><br>(daraz.com.np)</td>
+                <td>Individual Product Page and Checkout Page</td>
+                <td>EcoMart takes inspiration from Daraz’s product detail layout and checkout flow while avoiding excessive ads and banners.</td>
+            </tr>
+
+            <tr>
+                <td><strong>Amazon India</strong><br>(amazon.in)</td>
+                <td>Product Card Structure</td>
+                <td>EcoMart uses Amazon’s product card layout, clearly showing the product image, name, price, and action button.</td>
+            </tr>
+
+            <tr>
+                <td><strong>Apple</strong><br>(apple.com)</td>
+                <td>Landing Page Design and CTA Placement</td>
+                <td>EcoMart is inspired by Apple’s landing pages by using clear primary and secondary call-to-action buttons.</td>
+            </tr>
+        </table>
+
+        <!-- Blog-style Side-by-Side Comparison Section -->
+<section class="container" style="padding: 30px; width: 100%; background-color: #f9f9f9;">
+    <h1 style="margin-bottom: 15px;">Design Comparisons</h1>
+    <p style="margin-bottom: 30px;">
+        This section shows how EcoMart (Nepal) adapts design elements from popular reference websites.
+        Each comparison displays the original reference on the left and EcoMart’s implementation on the right.
+    </p>
+
+    <!-- 1. EcoMart Malaysia -->
+    <article style="margin-bottom: 50px;">
+        <h2>EcoMart Malaysia Branding</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+            <img src="../Assets/research/ecomart-malaysia.png" 
+                 alt="EcoMart Malaysia Website" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+            <img src="../Assets/research/ecomart-nepal-branding.png" 
+                 alt="EcoMart Nepal Branding" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+        </div>
+        <p>
+            EcoMart Malaysia uses a consistent green color palette and simple header layout for eco-friendly branding.
+            EcoMart (Nepal) adopts these elements but simplifies the navigation to improve usability while maintaining the brand identity.
+        </p>
+    </article>
+
+    <!-- 2. Apple -->
+    <article style="margin-bottom: 50px;">
+        <h2>Apple Landing Page</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+            <img src="../Assets/research/apple-landing.png" 
+                 alt="Apple Landing Page" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+            <img src="../Assets/research/ecomart-nepal-landing.png" 
+                 alt="EcoMart Nepal Landing Page" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+        </div>
+        <p>
+            Apple’s landing page emphasizes large visuals and clear primary and secondary buttons.
+            EcoMart (Nepal) uses this approach by keeping the main actions clear and the landing page clean, improving user engagement.
+        </p>
+    </article>
+
+    <!-- 3. Amazon -->
+    <article style="margin-bottom: 50px;">
+        <h2>Amazon Product Cards</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+            <img src="../Assets/research/amazon-product-card.png" 
+                 alt="Amazon Product Card" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+            <img src="../Assets/research/ecomart-nepal-product-card.png" 
+                 alt="EcoMart Nepal Product Card" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+        </div>
+        <p>
+            Amazon product cards show the image, title, price, and action buttons clearly.
+            EcoMart (Nepal) follows this structure to make products easy to browse and purchase.
+        </p>
+    </article>
+
+    <!-- 4. Daraz -->
+    <article style="margin-bottom: 50px;">
+        <h2>Daraz Product and Checkout Flow</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+            <img src="../Assets/research/daraz-product.png" 
+                 alt="Daraz Product Page" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+            <img src="../Assets/research/ecomart-nepal-checkout.png" 
+                 alt="EcoMart Nepal Product Page" 
+                 class="blogImage" style="flex: 1 1 48%; min-width: 250px;">
+        </div>
+        <p>
+            Daraz provides detailed product info and a structured checkout flow.
+            EcoMart (Nepal) adapts this layout to make shopping smooth while keeping the interface less cluttered and user-friendly.
+        </p>
+    </article>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footerGrid">
+        <div class="footerBrand">
+            <div class="altLogoContainer" style="width:128px; margin-bottom:15px;">
+                <img src="../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
             </div>
-        </a>
-        <nav aria-label="Main Navigation">
+            <p>Promoting ethical commerce since 2025.</p>
+        </div>
+
+        <div class="footerLinks">
+            <h4>Quick Links</h4>
             <ul>
-                <li><a href="../index.html">Home</a></li>
                 <li><a href="products.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main class="reveal">
-        <section class="researchBanner">
-            <div class="container">
-                <h1 style="color: #2F6F3E; font-size: 2.5rem;">Competitive Analysis</h1>
-                <p>Contrasting EcoMart's components against industry benchmarks and creative inspirations.</p>
-            </div>
-        </section>
-
-        <section class="container" style="padding: 40px ;">
-            <div class="researchConclusion">
-                <h3>Research Objective</h3>
-                <p>To investigate how modern e-commerce platforms balance functional grid layouts with sustainable branding, specifically comparing local Nepali markets (Daraz) with global standards (Amazon) and creative agencies (Awwwards).</p>
-            </div>
-
-            <table class="researchTable">
-                <thead>
-                    <tr>
-                        <th>Reference Website</th>
-                        <th>Component Investigated</th>
-                        <th>EcoMart Contrast</th>
-                        <th>Peculiarities Identified</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>EcoMart Malaysia</strong><br>(ecomart.com.my)</td>
-                        <td>Branding & Header Navigation</td>
-                        <td>EcoMart (NP) adopts a similar "Green-First" identity but optimizes the nav for academic simplicity.</td>
-                        <td>Uses a specific color palette that emphasizes organic trust and eco-certified labeling.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Daraz Nepal</strong><br>(daraz.com.np)</td>
-                        <td>Landing Page Product Preview</td>
-                        <td>EcoMart utilizes the "Flash Sale" pricing logic seen here but removes the cluttered banners.</td>
-                        <td>High-density grid with heavy use of time-sensitive discount triggers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Amazon India</strong><br>(amazon.in)</td>
-                        <td>Product Card Architecture</td>
-                        <td>EcoMart follows the Amazon logic of "Image > Title > Price > CTA" for maximum usability.</td>
-                        <td>Massive focus on dual-pricing (Original vs. Deal Price) to drive conversions.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Crearist (Awwwards)</strong><br>(awwwards.com)</td>
-                        <td>Creative Product Page Inspo</td>
-                        <td>EcoMart adopts the "Clean Space" and typography logic while maintaining a pragmatic structure.</td>
-                        <td>Experimental layout that prioritizes visual storytelling over traditional grid density.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="researchConclusion">
-                <h3>Technical Conclusion</h3>
-                <p>The research confirms that while <strong>Amazon</strong> and <strong>Daraz</strong> provide the most usable data structures for product cards, the branding inspiration from <strong>EcoMart Malaysia</strong> is essential for establishing niche identity. My implementation avoids the "clutter-heavy" peculiarity of Daraz, opting instead for the "Creative-Clean" approach found on <strong>Awwwards</strong> listings.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footerGrid">
-            <div class="footerBrand">
-                <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
-                    <img src="../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
-                </div>
-                <p>Promoting ethical commerce since 2025.</p>
-            </div>
-            <div class="footerLinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
         </div>
-        <div class="footerBottom">
-            <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
-        </div>
-    </footer>
+    </div>
+
+    <div class="footerBottom">
+        <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

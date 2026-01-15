@@ -7,22 +7,27 @@
     <title>Sign Up | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
+        /* Sets the default page background and ensures the content fills the screen height */
         body { 
             margin: 0; 
             min-height: 100vh;
             background-color: #EEF6F1; 
         }
 
+        /* Centered container that holds both the form and the side image */
         .authWrapper {
             display: flex;
             max-width: 1100px;
             margin: 50px auto;
             background: #ffffff;
             border-radius: 12px;
+            /* Prevents child elements like the image from overflowing rounded corners */
             overflow: hidden;
+            /* Adds depth with a soft shadow around the box */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
+        /* The left side of the wrapper containing the user input fields */
         .signupContainer {
             flex: 1;
             padding: 60px;
@@ -31,36 +36,48 @@
             justify-content: center;
         }
 
+        /* Navigation links at the top of the form to switch between Log In and Sign Up */
         .authTabs { margin-bottom: 30px; }
+        
+        /* General styling for the tab links */
         .authTabs a { 
             text-decoration: none; 
             color: #888; 
             margin-right: 20px; 
             font-weight: bold; 
         }
-        .authTabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
 
+        /* Highlights the current page link with a dark underline */
+        .authTabs a.active { 
+            color: #1F2933; 
+            border-bottom: 2px solid #1F2933; 
+        }
+
+        /* Main heading for the registration form */
         .signupContainer h2 { 
             margin: 0 0 10px 0; 
             font-size: 28px; 
         }
+
+        /* Smaller text below the heading to provide context */
         .subtitle { 
             color: #666; 
             font-size: 14px; 
             margin-bottom: 30px; 
         }
 
+        /* Uniform styling for all text entry boxes */
         .signupContainer input {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            /* Ensures padding doesn't make the box wider than 100% */
             box-sizing: border-box;
         }
 
-        
-
+        /* The right side of the wrapper showing a decorative bamboo photo */
         .decorationImg {
             flex: 1;
             background: url('../Assets/lush-green-bamboo-forest.jpg') center/cover no-repeat;
@@ -105,7 +122,7 @@
                 <input type="password" placeholder="Create Password" required>
                 <input type="password" placeholder="Confirm Password" required>
                 
-                <button type="submit" class="btnPrimary" >Create Account</button>
+                <button type="submit" class="btnPrimary">Create Account</button>
             </form>
         </div>
 

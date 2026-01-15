@@ -7,47 +7,59 @@
     <title>Blog | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* INTERNAL CSS: BLOG SPECIFIC LAYOUT */
+        /* Top header section of the blog with a light green background */
         .blogBanner {
-            padding: 80px ;
+            padding: 80px 20px;
             text-align: center;
             background: #EEF6F1;
             border-bottom: 1px solid #eee;
         }
 
-        .blogImage {
-            width: 100%;
-            height: 350px;
-            background: #EEF6F1;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            color: #2F6F3E;
-            font-weight: 700;
-            border: 2px dashed #2F6F3E;
-        }
-
+        /* Standard text container to ensure the blog article is easy to read */
         .postContent {
             line-height: 1.8;
             color: #444;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .blogQuote {
-            border-left: 4px solid #2F6F3E;
-            padding-left: 20px;
-            margin: 20px 0;
-            font-style: italic;
+        /* Large featured image box at the start of the article */
+        .heroImage {
+            width: 100%;
+            height: 400px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            /* Keeps the image within the rounded corners */
+            overflow: hidden;
         }
 
-        /* Reference List Styling */
+        /* Ensures the hero image fills the box without losing its shape */
+        .heroImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Spacing for individual sections (paragraphs and headings) in the blog */
+        .postSection {
+            margin-bottom: 40px;
+        }
+
+        /* Heading style for each blog section */
+        .postSection h2 {
+            color: #2F6F3E;
+            margin-bottom: 15px;
+            font-size: 28.8px; /* Converted from 1.8rem */
+        }
+
+        /* Grey box at the bottom for listing academic or external sources */
         .referenceSection {
             margin-top: 60px;
             padding: 30px;
             background: #f9f9f9;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 14.4px; /* Converted from 0.9rem */
         }
 
         .referenceSection ol {
@@ -58,12 +70,29 @@
             margin-bottom: 10px;
             color: #555;
         }
+
+        /* A side box that follows the user as they scroll down the page */
+        .stickyAside {
+            position: sticky;
+            top: 120px; /* Distance from the top of the browser window when floating */
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        
+        .stickyAside h3 {
+            margin-top: 0;
+            color: #2F6F3E;
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="../index.html">
-            <div class="logoContainer" style="width: 128px; ">
+            <div class="logoContainer" style="width: 128px;">
                 <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
             </div>
         </a>
@@ -81,50 +110,71 @@
     <main class="reveal">
         <section class="blogBanner">
             <div class="container">
-                <h1 style="color: #2F6F3E; font-size: 2.8rem; margin-bottom: 15px;">Eco-Insights</h1>
-                <p style="font-size: 1.2rem; color: #666;">Analyzing how digital innovation drives global sustainability goals [1].</p>
+                <h1 style="color: #2F6F3E; font-size: 44.8px; margin-bottom: 15px;">Technology & Sustainable Living</h1>
+                <p style="font-size: 19.2px; color: #666;">Exploring the dual nature of innovation in the 21st Century.</p>
             </div>
         </section>
 
-        <section class="container" style="padding: 60px ;">
-            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 50px;">
+        <section class="container" style="padding: 60px 20px;">
+            <div class="grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px; align-items: start;">
                 
                 <div class="postContent">
-                    <article style="margin-bottom: 80px;">
-                        <div class="blogImage">IMPACT: CLOUD COMPUTING & LOGISTICS</div>
-                        <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #2F6F3E;">Technology: The Silent Engine of Sustainability</h2>
-                        <p>Modern internet technologies have fundamentally shifted how businesses manage their environmental footprint. Digital supply chain tracking allows companies like EcoMart to monitor the lifecycle of products in real-time, significantly reducing the carbon footprint associated with inefficient logistics and overproduction [2].</p>
-                        
-                        <div class="blogQuote">
-                            "By optimizing delivery routes through AI and reducing paper-based documentation, businesses can reduce operational waste by up to 30% [1]."
+                    <article>
+                        <div class="heroImage">
+                            <img src="../Assets/technologyAndSustainableLiving.jpg" alt="Technology and Sustainability Concept">
                         </div>
 
-                        <p>For the consumer, technology bridges the trust gap. Mobile applications now allow shoppers to scan QR codes and instantly verify the "fair trade" status or ethical origin of a bamboo toothbrush or hemp textile [3]. This transparency empowers daily shoppers to make high-impact environmental decisions through their digital devices.</p>
-                    </article>
+                        <div class="postSection">
+                            <h2>About Technology</h2>
+                            <p>Technology refers to the practical application of scientific knowledge to develop tools, systems, and processes that improve human life and productivity (Kotler & Keller, 2016). Nowadays, technology has transformed advances in many sectors like communication, healthcare, education, and commerce. It is now being used to solve environmental challenges by supporting renewable energy, sustainable manufacturing, and responsible consumption practices (World Economic Forum, 2021).</p>
+                        </div>
 
-                    <article>
-                        <div class="blogImage">IMPACT: INTERNET OF THINGS (IoT)</div>
-                        <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #2F6F3E;">Smart Homes and Green Living</h2>
-                        <p>Daily life is now optimized through the Internet of Things (IoT). Smart grids and automated domestic systems use sensors to adjust energy consumption based on real-time occupancy, effectively reducing domestic electricity waste [1]. These high-tech solutions are no longer luxuries; they are essential tools for maintaining a low-impact lifestyle in an urban environment [2].</p>
+                        <div class="postSection">
+                            <h2>Positive Impact of Technology</h2>
+                            <p>Technology has played a great role in the positive impact on society by increasing efficiency and reducing costs. Digital platforms enable rapid information sharing, helping individuals become more aware of environmental issues and sustainable choices (United Nations, 2023). By the help of technology the use of fossil fuels are being less; in place of using fossil fuels people are using electricity.</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Negative Impact of Technology</h2>
+                            <p>Despite its advantages, technology also brings challenges. The rapid growth of electronic devices has increased electronic waste, contributing to pollution and resource depletion (United Nations, 2023). Excessive energy use from data centers plays a vital role in increasing carbon emissions (International Energy Agency, 2022).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>How Technology Boosts Sustainable Sales</h2>
+                            <p>Technology is essential in advancing the market for sustainable products. It enhances transparency, increases accessibility, and fosters stronger consumer engagement (Kotler & Keller, 2016). Consumers are more interested in sustainable products as they become aware of climate change (United Nations, 2023).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Sustainability Living Tips</h2>
+                            <p>Digital tools like energy-management applications and smart home devices help users monitor and use energy more efficiently. These innovations make living a sustainable life easier and more effective by reducing waste materials (International Energy Agency, 2022).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Conclusion</h2>
+                            <p>In 2026, technology remains one of the most powerful tools influencing modern society. While it brings benefits like innovation and environmental awareness, we must address the problems of e-waste and energy consumption. Ultimately, technology has boosted sustainable product sales and promoted global ethical consumption goals.</p>
+                        </div>
                     </article>
 
                     <section class="referenceSection">
-                        <h3 style="margin-bottom: 15px; color: #333;">References</h3>
+                        <h3>References</h3>
                         <ol>
-                            <li>Global e-Sustainability Initiative (GeSI). (2025). <i>#DigitalWithPurpose: Delivering a SMARTer2030</i>. Research on how digital technology helps achieve UN Sustainable Development Goals.</li>
-                            <li>International Energy Agency (IEA). (2024). <i>Digitalization and Energy Report</i>. Impact of smart technology on domestic and industrial energy efficiency.</li>
-                            <li>United Nations Environment Programme (UNEP). (2024). <i>Technology and the Environment: Bridging the Gap</i>. Guidelines for ethical e-commerce and digital supply chain transparency.</li>
+                            <li>Carr, N. (2010). <i>The Shallows: What the Internet Is Doing to Our Brains</i>. New York: W. W. Norton & Company.</li>
+                            <li>Elkington, J. (1997). <i>Cannibals with Forks: The Triple Bottom Line of 21st Century Business</i>. Oxford: Capstone Publishing.</li>
+                            <li>International Energy Agency. (2022). <i>World Energy Outlook</i>. Paris: IEA.</li>
+                            <li>Kotler, P. and Keller, K.L. (2016). <i>Marketing Management</i>. Harlow: Pearson Education.</li>
+                            <li>United Nations. (2023). <i>The Sustainable Development Goals Report</i>. New York: United Nations.</li>
+                            <li>World Economic Forum. (2021). <i>Technology and Innovation for Sustainable Development</i>. Geneva: WEF.</li>
                         </ol>
                     </section>
                 </div>
 
                 <aside>
-                    <div class="previewBox" style="position: sticky; top: 100px;">
-                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E; display: inline-block;">Recent Posts</h3>
-                        <ul style="list-style: none; margin-top: 15px;">
-                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Digital Supply Chains →</a></li>
-                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">The Future of Hemp Tech →</a></li>
-                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">AI in Reforestation →</a></li>
+                    <div class="stickyAside">
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E; display: inline-block;">Categories</h3>
+                        <ul style="list-style: none; margin-top: 15px; padding: 0;">
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Eco-Tech Trends →</a></li>
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Sustainable Living →</a></li>
+                            <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Success Stories →</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -133,23 +183,6 @@
     </main>
 
     <footer>
-        <div class="footerGrid">
-            <div class="footerBrand">
-                <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
-                    <img src="../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
-                </div>
-                <p>Promoting ethical commerce since 2025.</p>
-            </div>
-            <div class="footerLinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Shop</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="footerBottom">
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
