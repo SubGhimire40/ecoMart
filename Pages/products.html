@@ -38,6 +38,16 @@
             transition: transform 0.3s ease;
         }
 
+        .productCardLarge:hover {
+            /* Makes the growth animation smooth over half a second */
+            transition: 0.3s;
+            /* Slightly enlarges the card */
+            transform: scale(1.02);
+            /* Adds a soft green glow shadow for depth */
+            box-shadow: 0 16px 32px #a1a1a1;
+        }
+
+
         /* Container that limits the height of product photos for a uniform look */
         .ProductImg {
             width: 100%;
@@ -64,7 +74,7 @@
         /* Styling for the crossed-out original price to show savings */
         .originalPrice {
             text-decoration: line-through;
-            color: #c40000;
+            color: red;
             font-size: 14px; /* Converted from 0.85rem */
             margin-right: 10px;
         }
@@ -84,6 +94,7 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="signUp.html">Sign In</a></li>
             </ul>
         </nav>
     </header>

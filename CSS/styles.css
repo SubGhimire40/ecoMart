@@ -38,6 +38,7 @@ body {
     font-family: "DM Sans", sans-serif;
     color: #333;
     line-height: 1.6;
+    margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -49,7 +50,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 48px;
     background: #FAFAF8;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     position: sticky;
