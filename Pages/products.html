@@ -14,6 +14,10 @@
             background: #EEF6F1;
         }
 
+        .contentArea {
+            max-width: 1280px;
+        }
+
         /* The grid system that organizes products into 3 equal columns */
         .productContainer {
             display: grid;
@@ -36,6 +40,10 @@
             border-radius: 8px;
             padding: 20px;
             transition: transform 0.3s ease;
+        }
+
+        .productCardLarge h3 {
+            font-size: 24px;
         }
 
         .productCardLarge:hover {
@@ -65,7 +73,7 @@
 
         /* Text styling for the final selling price */
         .priceTag {
-            font-size: 18px; /* Converted from 1.15rem */
+            font-size: 18px; 
             font-weight: 500;
             color: #2F6F3E;
             margin: 10px 0;
@@ -74,8 +82,8 @@
         /* Styling for the crossed-out original price to show savings */
         .originalPrice {
             text-decoration: line-through;
-            color: red;
-            font-size: 14px; /* Converted from 0.85rem */
+            color: rgb(255, 65, 65);
+            font-size: 14px;
             margin-right: 10px;
         }
     </style>
