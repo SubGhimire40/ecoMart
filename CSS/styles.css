@@ -92,7 +92,7 @@ nav ul li a.active {
 }
 
 /* Centralized content wrapper used across all pages */
-.container {
+.contentArea {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px; 

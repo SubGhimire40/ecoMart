@@ -74,8 +74,9 @@
         /* A side box that follows the user as they scroll down the page */
         .stickyAside {
             position: sticky;
-            top: 120px; /* Distance from the top of the browser window when floating */
             background: #ffffff;
+            width: 350px;
+            margin-top: 256px;
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #eee;
@@ -108,19 +109,38 @@
         </nav>
     </header>
 
-    <main class="reveal">
+    <main>
         <section class="blogBanner">
-            <div class="container">
-                <h1 style="color: #2F6F3E; font-size: 44.8px; margin-bottom: 15px;">Technology & Sustainable Living</h1>
-                <p style="font-size: 19.2px; color: #666;">Exploring the dual nature of innovation in the 21st Century.</p>
+            <div class="contentArea">
+                <h1 style="color: #2F6F3E; font-size: 48px; margin-bottom: 15px;">Technology & Sustainable Living</h1>
             </div>
         </section>
 
-        <section class="container" style="padding: 60px 20px;">
-            <div class="grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px; align-items: start;">
+        <section class="contentArea" style="padding: 60px 20px;">
+
+
+            
+            <div class="grid" style="display: flex; gap: 50px; align-items: start;">
                 
                 <div class="postContent">
                     <article>
+
+                        <div style="margin-bottom: 30px;">
+                            <h1 style="color: #2F6F3E; font-size: 40px; margin-bottom: 10px;">Exploring the dual nature of Technology & Sustainable Living in the 21st Century.</h1>
+                            
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 700; color: #333;">Rochit Tako</p>
+                                        <p style="margin: 0; font-size: 13px; color: #666;">
+                                           Jan 12, 2026 • 6 min read
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btnPrimary" style="padding: 8px 16px; cursor: pointer; border-radius: 4px; font-weight: 600;">Follow</button>
+                            </div>
+                        </div>
+                        
                         <div class="heroImage">
                             <img src="../Assets/technologyAndSustainableLiving.jpg" alt="Technology and Sustainability Concept">
                         </div>
@@ -171,7 +191,7 @@
 
                 <aside>
                     <div class="stickyAside">
-                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E; display: inline-block;">Categories</h3>
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E; ">More From Rochit...</h3>
                         <ul style="list-style: none; margin-top: 15px; padding: 0;">
                             <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Eco-Tech Trends →</a></li>
                             <li style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600;">Sustainable Living →</a></li>
