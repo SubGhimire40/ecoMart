@@ -142,11 +142,7 @@ nav ul li a.active {
 }
 
 /* Auto-responsive grid system for cards and team members */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
+
 
 /* Styling for content boxes with a lift-up effect on hover */
 .previewBox {
@@ -181,7 +177,6 @@ footer {
 
 .footerBrand {
     flex: 2; 
-    margin: auto;
 }
 
 .footerBrand h2 {
@@ -190,13 +185,12 @@ footer {
 }
 
 .footerLinks {
-    margin: auto;
-    text-align: right;
+    margin-right: 40px;
 }
 
 .footerLinks h4 {
     margin-bottom: 20px;
-    font-size: 24px; 
+    font-size: 16px; 
     color: #1F2933;
 }
 
@@ -212,13 +206,10 @@ footer {
 .footerLinks a {
     text-decoration: none;
     color: #666;
-    font-size: 12px; 
+    font-size: 14.4px; 
     transition: 0.3s;
 }
 
-.footerLinks a:hover {
-    color: #2F6F3E;
-}
 
 /* Bottom copyright bar */
 .footerBottom {
@@ -226,5 +217,5 @@ footer {
     padding-top: 30px;
     border-top: 1px solid #eee;
     color: #999;
-    font-size: 12px; 
+    font-size: 13.6px; 
 }

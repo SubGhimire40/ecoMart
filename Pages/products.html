@@ -20,9 +20,7 @@
 
         /* The grid system that organizes products into 3 equal columns */
         .productContainer {
-            display: grid;
-            /* Creates 3 equal width columns that stay consistent */
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
             gap: 32px;
             padding: 35px;
         }
@@ -35,6 +33,7 @@
             justify-content: space-between;
             /* Ensures all cards in a row stretch to the height of the tallest card */
             height: 100%; 
+            width: 360px;
             background: #FAFAF8;
             border: 1px solid #eee;
             border-radius: 8px;
@@ -162,7 +161,9 @@
                         <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
                     </a>
                 </article>
+            </div>
 
+            <div class="productContainer">
                 <article class="productCardLarge">
                     <div>
                         <div class="ProductImg">
@@ -207,6 +208,7 @@
                         <button class="btnPrimary" style="width: 100%; border: none; cursor: pointer;">View Product</button>
                     </a>
                 </article>
+            </div>
 
             </div>
         </section>
