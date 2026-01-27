@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Bamboo Basket | EcoMart</title>
+    <link rel="stylesheet" href="../../CSS/styles.css">
+
+    <style>
+    /* Sets the background color for the entire page to match the EcoMart light green theme */
+    body {
+        background-color: #EEF6F1;
+    }
+
+    /* Main container using Flexbox to align image and text side-by-side */
+    .mainBox {
+        max-width: 1100px;
+        margin: 180px auto 250px;
+        padding: 40px;
+        display: flex; /* Establishes a flex container for horizontal layout */
+        gap: 60px; /* Provides a fixed gutter between the product image and details */
+        align-items: flex-start; /* Ensures content aligns to the top of the container */
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Column for the product visual */
+    .leftArea {
+        width: 40%;
+        display: flex;
+        justify-content: center; /* Centers the image frame horizontally */
+    }
+
+    /* Styled frame to contain the product image */
+    .imgFrame {
+        width: 320px;
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border: 2px solid #8fbfa6;
+        border-radius: 14px;
+        padding: 10px;
+    }
+
+    /* Responsive image logic within the frame */
+    .imgFrame img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Prevents stretching; keeps the fabric top's aspect ratio intact */
+        display: block;
+    }
+
+    /* Padding for the content column */
+    .rightArea {
+        margin-top: 20px;
+    }
+
+    /* Primary product title */
+    .titleText {
+        font-size: 28px;
+        color: #2f5d3a;
+        margin-bottom: 15px;
+    }
+
+    /* Paragraph styling for product description and selling points */
+    .mainBox p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #2d2d2d;
+    }
+
+    /* Star rating display spacing */
+    .ratingSection {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    /* Price highlight using EcoMart's signature green */
+    .priceTag {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 15px 0;
+        color: #2f5d3a;
+    }
+
+    /* Discount visual using text-decoration */
+    .oldPrice {
+        text-decoration: line-through;
+        color: #888;
+        margin-left: 10px;
+    }
+
+    /* Primary Call to Action: Dark theme for maximum visibility */
+    .buyNow { 
+        background: #1F2933; 
+        color: #FAFAF8;
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* Secondary Call to Action: Light theme with border */
+    .addToCart { 
+        background: #FAFAF8; 
+        color: #1F2933; 
+        padding: 14px 28px;
+        border: 1px solid #1F2933;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* Logistical information container with a top separator */
+    .deliveryBox {
+        margin-top: 30px;
+        padding-top: 16px;
+        max-width: 320px;
+        border-top: 1px solid #e6e6e6; /* Creates a clean break from the purchase buttons */
+        font-size: 14px;
+    }
+
+    /* Bold labels for delivery details */
+    .deliveryBox strong {
+        font-size: 15px;
+        color: #212121;
+    }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html">
+            <div class="logoContainer" style="width: 128px;">
+                <img src="../../Assets/logo/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="../signUp.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainBox">
+        <div class="leftArea">
+            <div class="imgFrame">
+                <img src="../../Assets/bambooBasket.jpg" alt="Bamboo Basket">
+            </div>
+        </div>
+
+        <div class="rightArea">
+            <div class="titleText">Bamboo Basket</div>
+
+            <p>
+                Bamboo baskets are highly marketable, eco-friendly, and versatile, appealing to eco-conscious consumers and those looking for traditional home decor or storage solutions. They are commonly sold as hand-woven, sustainable alternatives to plastic for various purposes. 
+            </p>
+
+            <div class="ratingSection">⭐⭐⭐⭐ (4.0 Ratings)</div>
+
+            <div class="priceTag">
+                Rs. 250 <span class="oldPrice">Rs. 750</span>
+            </div>
+
+            <div class="actionButtons">
+                <button class="buyNow">Buy Now</button>
+                <button class="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="deliveryBox">
+                <strong>Delivery Options</strong><br>
+                Kathmandu, Bagmati<br>
+                Standard Delivery: Rs. 15<br>
+                Cash on Delivery Available<br><br>
+                2 Days Free Returns
+            </div>
+        </div>
+    </main>
+
+    
+
+    <footer>
+        <div class="footerGrid">
+            <div class="footerBrand">
+                <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
+                    <img src="../../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
+                </div>
+                <p>Promoting ethical commerce since 2025.</p>
+            </div>
+            <div class="footerLinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

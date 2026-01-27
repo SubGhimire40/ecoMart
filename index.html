@@ -7,12 +7,11 @@
     <title>Home | EcoMart</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <style>
-        /* Main landing area styling with a dark overlay to make text readable over the image */
+        /* This class styles the very first section people see, which has a large photo of the mountains */
         .indexBanner {
             background-image: url('Assets/landingImage.jpg'); 
             background-color: rgba(0, 0, 0, 0.5);
-            /* Darkens the background image so white text stands out clearly */
-            background-blend-mode: darken;
+            background-blend-mode: darken; /* This mixes the dark background color with the image to make it look dimmer */
             min-height: 700px;
             display: flex;
             align-items: center;
@@ -21,7 +20,7 @@
             border-bottom: 5px solid #2F6F3E;
         }
 
-        /* Horizontal layout for the featured product cards */
+        /* This class makes the product boxes sit side-by-side in a single row */
         .productRow {
             display: flex;
             justify-content: center;
@@ -29,9 +28,9 @@
             padding: 20px 0;
         }
 
-        /* Large card container for featured products with a clean border */
+        /* This styles the big rectangular boxes that hold information about our top products */
         .productCardLarge {
-            flex: 1;
+            flex: 1; /* This tells the card to grow and take up an equal share of the available space in the row */
             max-width: 400px;
             background: #FAFAF8;
             border-radius: 16px;
@@ -40,42 +39,38 @@
             border: 1px solid #f0f0f0;
         }
 
-        /* Animation logic: grows the card and adds a shadow when the user hovers over it */
+        /* This section defines what happens when a user moves their mouse pointer over a product card */
         .productCardLarge:hover {
-            /* Makes the growth animation smooth over half a second */
-            transition: 0.5s;
-            /* Slightly enlarges the card */
-            transform: scale(1.05);
-            /* Adds a soft green glow shadow for depth */
-            box-shadow: 0 20px 40px #2e7d321f;
+            transition: 0.5s; /* This makes the movement look smooth instead of happening instantly */
+            transform: scale(1.05); /* This makes the card grow slightly larger to show it is selected */
+            box-shadow: 0 20px 40px #2e7d321f; /* This adds a soft glow underneath the card to make it look like it's floating */
             border-color: #2F6F3E;
         }
 
-        /* Container that maintains a consistent size for product images */
+        /* This class creates a dedicated square area to hold the product photograph */
         .ProductImg {
             width: 100%;
             height: 380px;
             border-radius: 12px;
-            overflow: hidden;
+            overflow: hidden; /* This acts like a frame and hides any part of the image that is too big to fit */
             background: #f8f8f8;
             margin-bottom: 20px;
         }
 
-        /* Ensures the actual product photo fills the container perfectly without squishing */
+        /* This styles the actual image file inside the ProductImg container */
         .ProductImg img {
             width: 100%;
             height: 100%;
-            /* Crops the image to fill space while maintaining its shape */
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            object-fit: cover; /* This makes the photo fill the square perfectly without looking stretched or squished */
+            transition: transform 0.5s ease; /* This prepares the image for a smooth zoom effect when hovered */
         }
 
-        /* Zooms in on the photo slightly when the parent card is hovered */
+        /* This causes the product photo to zoom in slightly when you hover over the main card */
         .productCardLarge:hover .ProductImg img {
-            transform: scale(1.05);
+            transform: scale(1.05); /* This makes the image inside the box grow while the box itself stays the same size */
         }
 
-        /* Grid layout that organizes the platform section into 4 equal columns */
+        /* This styles the grid layout used in the lower sections of the page to keep items aligned */
         main section .grid {
             display: flex;
             margin: auto;
@@ -83,7 +78,7 @@
             margin: 40px auto;
         }
 
-        /* Box styling for the category previews with a colored top-border accent */
+        /* This class styles the boxes used to preview different parts of our website like the blog or shop */
         .previewBox {
             display: flex;
             flex-direction: column;
@@ -91,15 +86,17 @@
             width: 250px;
             height: 100%;
             border-top: 4px solid #2F6F3E;
-            cursor: pointer;
+            cursor: pointer; /* This changes the mouse pointer to a hand to show that the box can be clicked */
         }
+
+        /* This class adds wide margins to the sides of the explore section so it doesn't touch the screen edges */
         .exploreBox
         {
             margin-left: 200px;
             margin-right: 200px;
         }
 
-        /* Small decorative box to hold the icons (cart, blog, etc.) */
+        /* This styles the small background box behind the emoji icons in the preview section */
         .iconPreview {
             background: #EEF6F1; 
             height: 120px; 
@@ -108,7 +105,7 @@
             display: flex; 
             align-items: center; 
             justify-content: center;
-            font-size: 40px; /* Converted from 2.5rem */
+            font-size: 40px; 
         }
     </style>
 </head>

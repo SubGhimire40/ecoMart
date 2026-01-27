@@ -7,36 +7,32 @@
     <link rel="stylesheet" href="../../CSS/styles.css">
 
         <style>
-    /* =======================
-    BASE THEME
-    ======================= */
+    /* Sets the background color for the entire page to the EcoMart light green theme */
     body {
         background-color: #EEF6F1;
     }
 
-    /* =======================
-    MAIN CONTAINER
-    ======================= */
+    /* This class creates the central white card that holds all product information */
     .mainBox {
         max-width: 1100px;
         margin: 180px auto 250px;
         padding: 40px;
-        display: flex;
-        gap: 60px;
-        align-items: flex-start;
+        display: flex; /* This Flexbox logic aligns the image area and the text area side-by-side */
+        gap: 60px; /* This creates a consistent 60px gutter between the image and the product details */
+        align-items: flex-start; /* This ensures both sections align at the top of the container */
         background-color: #ffffff;
         border-radius: 16px;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
-    /* LEFT SIDE */
+    /* This class defines the width of the image section (40% of the container) */
     .leftArea {
         width: 40%;
         display: flex;
-        justify-content: center;
+        justify-content: center; /* This keeps the product image centered within its 40% allocation */
     }
 
-    /* IMAGE BOX */
+    /* This class creates the visual border/frame specifically for the product photo */
     .imgFrame {
         width: 320px;
         height: 320px;
@@ -44,32 +40,32 @@
         align-items: center;
         justify-content: center;
         background-color: #ffffff;
-        border: 2px solid #8fbfa6;
+        border: 2px solid #8fbfa6; /* Uses a medium green border to highlight the product */
         border-radius: 14px;
         padding: 10px;
     }
 
+    /* Ensures the image stays within the 320px frame without getting distorted */
     .imgFrame img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: contain; /* This logic prevents the product image from being cropped or stretched */
         display: block;
     }
 
-    /* RIGHT SIDE */
+    /* Adds a small margin to the details section for better alignment */
     .rightArea {
         margin-top: 20px;
     }
 
-    /* =======================
-    TEXT CONTENT
-    ======================= */
+    /* Styles the main product name heading */
     .titleText {
         font-size: 28px;
         color: #2f5d3a;
         margin-bottom: 15px;
     }
 
+    /* Controls the spacing and readability of the product description paragraph */
     .mainBox p {
         font-size: 16px;
         line-height: 1.6;
@@ -77,13 +73,13 @@
         color: #2d2d2d;
     }
 
-    /* RATING */
+    /* Sets the visual size for the star ratings */
     .ratingSection {
         margin: 10px 0;
         font-size: 14px;
     }
 
-    /* PRICE */
+    /* Styles the current price to make it the most prominent text in the details section */
     .priceTag {
         font-size: 20px;
         font-weight: bold;
@@ -91,45 +87,46 @@
         color: #2f5d3a;
     }
 
+    /* Adds the "struck-through" effect for the original price to show a discount */
     .oldPrice {
         text-decoration: line-through;
         color: #888;
         margin-left: 10px;
     }
 
-    /* =======================
-    BUTTONS
-    ======================= */
-
+    /* Primary CTA button: Dark background with light text for high contrast */
     .buyNow { 
-            background: #1F2933; 
-            color: #FAFAF8;
-            padding: 14px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-    .addToCart { 
-            background: #FAFAF8; 
-            color: #1F2933; 
-            padding: 14px 28px;
-            border: 1px solid #FAFAF8;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-        }
+        background: #1F2933; 
+        color: #FAFAF8;
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
 
-    /* =======================
-    DELIVERY INFO
-    ======================= */
+    /* Secondary button: Light background with a border to differentiate from 'Buy Now' */
+    .addToCart { 
+        background: #FAFAF8; 
+        color: #1F2933; 
+        padding: 14px 28px;
+        border: 1px solid #1F2933;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* This class groups the delivery details and separates them with a top border */
     .deliveryBox {
         margin-top: 30px;
         padding-top: 16px;
         max-width: 320px;
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6; /* Creates a subtle line to separate product info from shipping info */
         font-size: 14px;
     }
 
+    /* Makes the "Delivery Options" label slightly bolder and darker */
     .deliveryBox strong {
         font-size: 15px;
         color: #212121;

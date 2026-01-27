@@ -7,6 +7,7 @@
     <title>Blog | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
+        /* This class styles the large banner at the top of the blog */
         .blogBanner {
             padding: 80px 20px;
             text-align: center;
@@ -14,38 +15,44 @@
             border-bottom: 1px solid #eee;
         }
 
+        /* This class centers the blog text and limits its width for better readability */
         .postContent {
-            line-height: 1.8;
+            line-height: 1.8; /* This adds extra space between lines of text to prevent eye strain */
             color: #444;
             max-width: 800px;
             margin: 0 auto;
         }
 
+        /* This class creates a container for the large featured image at the top of the post */
         .heroImage {
             width: 100%;
             height: 400px;
             background: #f0f0f0;
             border-radius: 12px;
             margin-bottom: 30px;
-            overflow: hidden;
+            overflow: hidden; /* This ensures the image corners are rounded to match the container */
         }
 
+        /* This ensures the hero image fills the box without losing its proportions */
         .heroImage img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* This crops the image to fit the 400px height perfectly without squashing it */
         }
 
+        /* This class adds consistent spacing between different paragraphs or topics in the blog */
         .postSection {
             margin-bottom: 40px;
         }
 
+        /* This styles the sub-headers within the blog post using EcoMart's signature green */
         .postSection h2 {
             color: #2F6F3E;
             margin-bottom: 15px;
             font-size: 28.8px;
         }
 
+        /* This class styles the bibliography area at the bottom of the page */
         .referenceSection {
             margin-top: 60px;
             padding: 30px;
@@ -54,20 +61,18 @@
             font-size: 14.4px;
         }
 
+        /* This adds standard padding to the numbered reference list */
         .referenceSection ol {
             padding-left: 20px;
         }
 
-        .referenceSection li {
-            margin-bottom: 10px;
-            color: #555;
-        }
-
+        /* This class creates the 'Floating' effect for the sidebar */
         .stickyAside {
-            position: sticky;
+            position: sticky; /* This logic keeps the sidebar visible while the user scrolls through long text */
+            top: 20px; /* This tells the sidebar to stop moving when it is 20 pixels from the top of the screen */
             background: #ffffff;
             width: 350px;
-            margin-top: 256px;
+            margin-top: 256px; /* This aligns the sidebar to start level with the first paragraph */
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #eee;
@@ -75,6 +80,7 @@
             z-index: 10;
         }
         
+        /* Styles the header inside the sidebar */
         .stickyAside h3 {
             margin-top: 0;
             color: #2F6F3E;

@@ -6,37 +6,46 @@
     <title>Hemp Laptop Bag | EcoMart</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
 
-        <style>
-    /* =======================
-    BASE THEME
-    ======================= */
+        I have updated your product detail page for the Hemp Laptop Bag. I added specific comments to explain the Flexbox layout, the Box Model (padding and margins), and the Image Handling logic to ensure your code is clean and VIVA-ready.
+
+Updated Product Page (hemp-laptop-bag.html)
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Hemp Laptop Bag | EcoMart</title>
+    <link rel="stylesheet" href="../../CSS/styles.css">
+
+    <style>
+    /* Sets the background color for the entire page to match the EcoMart light green theme */
     body {
         background-color: #EEF6F1;
     }
 
-    /* =======================
-    MAIN CONTAINER
-    ======================= */
+    /* This class defines the main container for the product details using Flexbox */
     .mainBox {
         max-width: 1100px;
         margin: 180px auto 250px;
         padding: 40px;
-        display: flex;
-        gap: 60px;
-        align-items: flex-start;
+        display: flex; /* Flexbox aligns the product image and details side-by-side */
+        gap: 60px; /* Provides consistent spacing between the left and right areas */
+        align-items: flex-start; /* Aligns children to the top of the container */
         background-color: #ffffff;
         border-radius: 16px;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
-    /* LEFT SIDE */
+    /* This class controls the space allocated for the product image */
     .leftArea {
         width: 40%;
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Centers the image frame within the left column */
     }
 
-    /* IMAGE BOX */
+    /* This class creates a styled border/frame for the product image */
     .imgFrame {
         width: 320px;
         height: 320px;
@@ -49,27 +58,27 @@
         padding: 10px;
     }
 
+    /* Ensures the image fits inside the frame without distortion */
     .imgFrame img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: contain; /* Prevents the image from being cropped or stretched */
         display: block;
     }
 
-    /* RIGHT SIDE */
+    /* Adds a small margin to the details section to prevent it from hugging the top of the container */
     .rightArea {
         margin-top: 20px;
     }
 
-    /* =======================
-    TEXT CONTENT
-    ======================= */
+    /* Styles the product name heading with EcoMart's signature green */
     .titleText {
         font-size: 28px;
         color: #2f5d3a;
         margin-bottom: 15px;
     }
 
+    /* Controls the text size and line height for the product description for better readability */
     .mainBox p {
         font-size: 16px;
         line-height: 1.6;
@@ -77,13 +86,13 @@
         color: #2d2d2d;
     }
 
-    /* RATING */
+    /* Styles the star rating text */
     .ratingSection {
         margin: 10px 0;
         font-size: 14px;
     }
 
-    /* PRICE */
+    /* Makes the current price bold and prominent */
     .priceTag {
         font-size: 20px;
         font-weight: bold;
@@ -91,45 +100,46 @@
         color: #2f5d3a;
     }
 
+    /* Styles the old price with a strikethrough to indicate a discount */
     .oldPrice {
         text-decoration: line-through;
         color: #888;
         margin-left: 10px;
     }
 
-    /* =======================
-    BUTTONS
-    ======================= */
-
+    /* Primary button style: High contrast for the main call to action */
     .buyNow { 
-            background: #1F2933; 
-            color: #FAFAF8;
-            padding: 14px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-    .addToCart { 
-            background: #FAFAF8; 
-            color: #1F2933; 
-            padding: 14px 28px;
-            border: 1px solid #FAFAF8;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-        }
+        background: #1F2933; 
+        color: #FAFAF8;
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
 
-    /* =======================
-    DELIVERY INFO
-    ======================= */
+    /* Secondary button style: Outlined for the secondary action */
+    .addToCart { 
+        background: #FAFAF8; 
+        color: #1F2933; 
+        padding: 14px 28px;
+        border: 1px solid #1F2933;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* Groups the shipping and returns information with a subtle divider line */
     .deliveryBox {
         margin-top: 30px;
         padding-top: 16px;
         max-width: 320px;
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6; /* Creates a visual separation using the top border */
         font-size: 14px;
     }
 
+    /* Bold labels for delivery options */
     .deliveryBox strong {
         font-size: 15px;
         color: #212121;

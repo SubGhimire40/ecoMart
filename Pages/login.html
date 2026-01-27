@@ -7,73 +7,80 @@
     <title>Sign In | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* Sets the base background for the page and ensures full height */
+        /* This tag selector sets the background color for the entire page area */
         body { 
             margin: 0; 
             min-height: 100vh; 
             background-color: #EEF6F1;
         }
 
-        /* Main box that holds the login form and the decorative image side-by-side */
+        /* This class styles the main container box that splits the screen into form and image sections */
         .authWrapper {
-            display: flex;
+            display: flex; /* This makes the login form and the forest image sit side-by-side */
             max-width: 1100px;
             margin: 50px auto;
             background: #ffffff;
             border-radius: 12px;
-            /* Ensures content stays inside the rounded corners */
-            overflow: hidden;
-            /* Creates a soft shadow effect for a floating look */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* This acts as a mask to ensure the image corners match the box's rounded edges */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* This adds a soft shadow to make the login box pop out from the background */
         }
 
-        /* The left half containing the form and inputs */
+        /* This class styles the left side of the box where the user enters their credentials */
         .loginContainer {
-            flex: 1;
+            flex: 1; /* This ensures the form area takes up exactly half of the available container width */
             padding: 60px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: column; /* This stacks the title and input fields vertically */
+            justify-content: center; /* This keeps the form content perfectly centered from top to bottom */
         }
 
-        /* Styling for the login/signup switch at the top */
+        /* This class adds spacing between the login/signup tabs and the main header */
         .authTabs { margin-bottom: 30px; }
+
+        /* This styles the 'Log In' and 'Sign Up' links at the top of the white box */
         .authTabs a { 
             text-decoration: none; 
             color: #888; 
             margin-right: 20px; 
             font-weight: bold; 
         }
-        /* Underlines the "Log In" link to show it is currently selected */
-        .authTabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
 
-        /* Form title styling */
+        /* This class identifies and underlines the link for the page the user is currently on */
+        .authTabs a.active { 
+            color: #1F2933; 
+            border-bottom: 2px solid #1F2933; /* This adds a dark line under the word to indicate selection */
+        }
+
+        /* This styles the main "Log In To Continue!" heading */
         .loginContainer h2 { margin: 0 0 10px 0; font-size: 28px; }
 
-        /* Uniform styling for text and password input fields */
+        /* This tag selector styles the boxes where the user types their username and password */
         .loginContainer input {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            /* Prevents padding from changing the width of the box */
-            box-sizing: border-box;
+            box-sizing: border-box; /* This logic prevents padding from making the input boxes wider than the form */
         }
 
-        /* The right half containing the atmospheric forest image */
+        /* This class styles the right-side section displaying the decorative forest photograph */
         .decorationImg {
-            flex: 1;
+            flex: 1; /* This ensures the image section takes up the remaining half of the container width */
             background: url('../Assets/lush-green-bamboo-forest.jpg') center/cover no-repeat;
             min-height: 500px;
         }
 
-        /* Adjusts the layout for smaller screens like tablets or phones */
+        /* This media query adjusts the layout specifically for screens narrower than 900 pixels (tablets/phones) */
         @media (max-width: 900px) {
-            /* Switches from side-by-side to stacked vertically */
+            /* This changes the layout from side-by-side columns to a single vertical stack */
             .authWrapper { flex-direction: column; margin: 20px; }
-            /* Places the image at the top of the stack on mobile */
-            .decorationImg { height: 250px; order: -1; }
+            
+            /* This moves the image to the top of the stack and shrinks its height for mobile viewing */
+            .decorationImg { 
+                height: 250px; 
+                order: -1; /* This CSS property forces the image to appear before the form in the vertical stack */
+            }
         }
     </style>
 </head>
