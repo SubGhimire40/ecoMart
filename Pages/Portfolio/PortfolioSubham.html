@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EcoMart - Sustainable Product Catalog">
-    <title>Portfolio</title>
+    <title>About Us | EcoMart</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
-	
+    <style>
+        .pageHeader {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .pageHeader h1 {
+            font-size: 48px;
+            margin-bottom: 6px;
+            color: #1F2933;
+        }
+        .contentArea {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            margin: 50px auto;
+        }
+        .bioSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .profileImg {
+            width: 250px;
+            min-width: 250px;
+            height: 250px;
+            border-radius: 126px;
+            overflow: hidden;
+            border: 2px solid #eeeeee;
+        }
+        .profileImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .detailsRow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
-<body>
-	<header>
+<body style="background-color: #EEF6F1;">
+    <header>
         <a href="../index.html">
             <div class="logoContainer" style="width: 128px;">
                 <img src="../../Assets/logo/logo.svg" alt="EcoMart Logo">
@@ -19,36 +62,90 @@
             <ul>
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../products.html">Shop</a></li>
-                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../blog.html">Blog</a></li>
                 <li><a href="../research.html">Research</a></li>
-                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../about.html" class="active">About Us</a></li>
                 <li><a href="../signUp.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-</body>
-<footer>
+    <main class="contentArea">
+        <section class="pageHeader">
+            <h1>ABOUT US</h1>
+            <p style="letter-spacing: 2px; color: #2F6F3E; font-weight: 600; margin-bottom: 40px; text-transform: uppercase;">Designer & Developer</p>
+
+            <div class="bioSection">
+                <div class="profileImg">
+                    <img src="../../Assets/images/profile.jpg" alt="Profile-Photo">
+                </div>
+                <div style="flex: 1; text-align: left;">
+                    <p>EcoMart was founded on the principle that commerce should not cost the earth. We curate products that meet rigorous environmental and ethical standards.</p>
+                    <p>Our mission is to bridge the gap between high-quality consumer goods and sustainable manufacturing practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailsRow">
+            <div class="previewBox" style="flex: 1;">
+                <h3>SKILLS</h3>
+                <ul style="padding-left: 20px; color: #2F6F3E;">
+                    <li>UI/UX Design</li>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                </ul>
+                <hr style="border:1px solid #eeeeee; margin: 10px 0;">
+                <div style="margin: 16px 0;">
+                    <h3>CONTACT ME</h3>
+                    <div style="margin-top: 15px;">
+                        <p style="margin: 8px 0;">
+                            <strong style="color: #2F6F3E;">Phone:</strong> +977 984-4129198
+                        </p>
+                        <p style="margin: 8px 0;">
+                            <strong style="color: #2F6F3E;">Email:</strong> <a href="mailto:subham.ghimire16@outlook.com" style="text-decoration: none; color: inherit;">subham.ghimire16@outlook.com</a>
+                        </p>
+                        <p style="margin: 8px 0;">
+                            <strong style="color: #2F6F3E;">Instagram:</strong> <a href="https://www.instagram.com/6040_subham/" style="color: inherit; text-decoration: none;">@6040_subham</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="previewBox" style="flex: 1; margin-left: 30px;">
+                <h3 style="margin-bottom: 64px;">HISTORY</h3>
+                <div style="margin: 16px 0;">
+                    <span style="font-weight: 700; color: #2F6F3E;">2025-2026</span>
+                    <p>Team Leader Of EcoMart Project</p>
+                </div>
+                <hr style="border:1px solid #eeeeee; margin: 10px 0;">
+                <div style="margin: 16px 0;">
+                    <span style="font-weight: 700; color: #2F6F3E;">2025</span>
+                    <p>Intern Designer at Mangobyte Digital</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="footerGrid">
             <div class="footerBrand">
-                <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
+                <div class="altLogoContainer" style="width: 128px; margin-bottom: 16px;">
                     <img src="../../Assets/logo/logo-alt.svg" alt="EcoMart Logo">
                 </div>
                 <p>Promoting ethical commerce since 2025.</p>
             </div>
             <div class="footerLinks">
                 <h4>Quick Links</h4>
-                            <ul>
-                
-                <li><a href="../products.html">Shop</a></li>
-                <li><a href="../blog.html" >Blog</a></li>
-                <li><a href="../research.html">Research</a></li>
-                <li><a href="../about.html">About Us</a></li>
-            </ul>
+                <ul>
+                    <li><a href="../products.html">Shop</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
             </div>
         </div>
         <div class="footerBottom">
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+</body>
 </html>

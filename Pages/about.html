@@ -75,7 +75,8 @@
 
         /* Stacked rows for the form inputs */
         .formRow {
-            display: grid; 
+            display: flex; 
+            flex-direction: column;
             gap: 8px;
         }
 
@@ -235,16 +236,8 @@
                     <input type="email" name="email" placeholder="example@email.com" required>
                 </div>
                 <div class="formRow">
-                    <label>Subject</label>
-                    <select name="subject">
-                        <option value="product">Product Inquiry</option>
-                        <option value="partnership">Business Partnership</option>
-                        <option value="other">General Question</option>
-                    </select>
-                </div>
-                <div class="formRow">
                     <label>Your Message</label>
-                    <textarea name="message" placeholder="How can we help?" required style="height: 120px; width: 1070px;"></textarea>
+                    <textarea name="message" placeholder="How can we help?" style="height: 120px; width: 1070px;" required></textarea>
                 </div>
                 <button type="submit" class="btnPrimary" style="width: fit-content; cursor: pointer; border: none;">Submit Inquiry</button>
             </form>
