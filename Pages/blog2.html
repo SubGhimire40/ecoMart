@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMart Blog - Technology and Environmental Impacts">
+    <title>Blog | EcoMart</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        /* This class styles the large banner at the top of the blog */
+        .blogBanner {
+            padding: 80px 20px;
+            text-align: center;
+            background: #EEF6F1;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* This class centers the blog text and limits its width for better readability */
+        .postContent {
+            line-height: 1.8; /* This adds extra space between lines of text to prevent eye strain */
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* This class creates a container for the large featured image at the top of the post */
+        .heroImage {
+            width: 100%;
+            height: 400px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden; /* This ensures the image corners are rounded to match the container */
+        }
+
+        /* This ensures the hero image fills the box without losing its proportions */
+        .heroImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This crops the image to fit the 400px height perfectly without squashing it */
+        }
+
+        /* This class adds consistent spacing between different paragraphs or topics in the blog */
+        .postSection {
+            margin-bottom: 40px;
+        }
+
+        /* This styles the sub-headers within the blog post using EcoMart's signature green */
+        .postSection h2 {
+            color: #2F6F3E;
+            margin-bottom: 15px;
+            font-size: 28.8px;
+        }
+
+        /* This class styles the bibliography area at the bottom of the page */
+        .referenceSection {
+            margin-top: 60px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-size: 14.4px;
+        }
+
+        /* This adds standard padding to the numbered reference list */
+        .referenceSection ol {
+            padding-left: 20px;
+        }
+
+        /* This class creates the 'Floating' effect for the sidebar */
+        .stickyAside {
+            position: sticky; /* This logic keeps the sidebar visible while the user scrolls through long text */
+            top: 20px; /* This tells the sidebar to stop moving when it is 20 pixels from the top of the screen */
+            background: #ffffff;
+            width: 360px;
+            margin-top: 256px; /* This aligns the sidebar to start level with the first paragraph */
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        
+        /* Styles the header inside the sidebar */
+        .stickyAside h3 {
+            margin-top: 0;
+            color: #2F6F3E;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px;">
+                <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signUp.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blogBanner">
+            <div class="contentArea">
+                <h1 style="color: #2F6F3E; font-size: 48px; margin-bottom: 15px;">Consumer Behavior and Technology</h1>
+            </div>
+        </section>
+
+        <section class="contentArea" style="padding: 60px 20px;">
+            <div class="grid" style="display: flex; gap: 50px; align-items: start;">
+                
+                <div class="postContent">
+                    <article>
+                        <div style="margin-bottom: 30px;">
+                            <h1 style="color: #2F6F3E; font-size: 40px; margin-bottom: 10px;">Technology's Role in Eco-Friendly Decisions</h1>
+                            
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 700; color: #333;">Rochit Tako</p>
+                                        <p style="margin: 0; font-size: 13px; color: #666;">
+                                            Jan 15, 2026 • 5 min read
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btnPrimary" style="padding: 8px 16px; cursor: pointer; border-radius: 4px; font-weight: 600;">Follow</button>
+                            </div>
+                        </div>
+                        
+                        <div class="heroImage">
+                            <img src="../Assets/consumerBehaviorAndTechnology.jpg">
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Consumer Behavior and Technology</h2>
+                            <p>Consumer behavior and technology influence eco-friendly decision making by examining all platforms, mobile applications, and websites. Gamification, Personal recommendation, social media campaigns help the user to use sustainable products and services (Juho Hamari, J. Koivisto & H. Sarsa, 2014).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Policy and Technology</h2>
+                            <p>Policy and Technology help to look after the government regulations, environmental policies, and incentives encourage the people to use sustainable technologies because of their benefits. Renewable energy promotion, green innovation grants, and circular economy regulations, which leads to every person’s behavior towards sustainability (Development, 2022).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Future Trends in Technology and Sustainability</h2>
+                            <p>Many people have already started making their houses smart by adding advanced technologies. People are trying to transfer sustainable living life within some years in many cities, renewable energy solutions, and emerging eco-technologies. It can also examine predictions for how technology will integrate with policy and society to achieve global sustainability goals (Rudolf Giffinger, Christian Fertner, Hans Kramar, Robert Kalasek, Nataša Pichler-Milanović & Evert Meijers, 2007).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>E-Commerce and Green Products</h2>
+                            <p>Online stores and mobile apps make it easier for people to find eco-friendly products. These platforms let customers compare how products affect the environment, read what others think, and choose brands that care about the planet. Smart technology also helps users find greener options by suggesting alternatives based on their choices.</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Community Engagement & Social Media</h2>
+                            <p>To raise awareness and to create communities who care about the environment, social media is a powerful tool. People are getting more encouraged and influenced by content creators who make content related to sustainable life.</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Conclusion</h2>
+                            <p>People are getting encouraged by different platforms like websites and social media, with the help of technology. Technology also has a hand regarding how people are making their decision to buy goods. Besides that, the government supports people to get a more sustainable life and can work for environmental goals with the help of smart technologies. Due to the teamwork between technological advancements, government policies, and digital interaction, it inspires people to create environmentally friendly preferences which guide society to a sustainable life for future generations.</p>
+                        </div>
+                    </article>
+
+                    <section class="referenceSection">
+                        <h3>References</h3>
+                        <ol>
+                            <li>Development, O. f.-o. (2022). Science, Technology and Innovation Policy for Sustainability Transitions. Paris: OECD Publishing.</li>
+                            <li>Juho Hamari, J. Koivisto & H. Sarsa. (2014). Does Gamification Work? – A literature review of empirical studies on gamification. Hawaii: Hawaii International Conference on System Sciences.</li>
+                            <li>Rudolf Giffinger, Christian Fertner, Hans Kramar, Robert Kalasek, Nataša Pichler-Milanović & Evert Meijers. (2007). Smart Cities: Ranking of European Medium-Sized Cities. Vienna: Centre of Regional Science, Vienna University of Technology, Vienna.</li>
+                        </ol>
+                    </section>
+                </div>
+
+                <aside>
+                    <div class="stickyAside">
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E;">More From Rochit...</h3>
+                        <ul style="list-style: none; margin-top: 15px; padding: 0;">
+                            <li style="margin-bottom: 15px;"><a href="blog2.html" style="text-decoration: none; color: #333; font-weight: 600;">Consumer Behavior And Technology</a></li>
+                            <li style="margin-bottom: 15px;"><a href="blog3.html" style="text-decoration: none; color: #333; font-weight: 600;">The Future of Urban Transportation</a></li>
+                            <li style="margin-bottom: 15px;"><a href="blog.html" style="text-decoration: none; color: #333; font-weight: 600;">Technology And Sustainable Living</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerBottom">
+            <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

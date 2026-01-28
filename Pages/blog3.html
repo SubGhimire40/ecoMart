@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMart Blog - Technology and Environmental Impacts">
+    <title>Blog | EcoMart</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        /* This class styles the large banner at the top of the blog */
+        .blogBanner {
+            padding: 80px 20px;
+            text-align: center;
+            background: #EEF6F1;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* This class centers the blog text and limits its width for better readability */
+        .postContent {
+            line-height: 1.8; /* This adds extra space between lines of text to prevent eye strain */
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* This class creates a container for the large featured image at the top of the post */
+        .heroImage {
+            width: 100%;
+            height: 400px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden; /* This ensures the image corners are rounded to match the container */
+        }
+
+        /* This ensures the hero image fills the box without losing its proportions */
+        .heroImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This crops the image to fit the 400px height perfectly without squashing it */
+        }
+
+        /* This class adds consistent spacing between different paragraphs or topics in the blog */
+        .postSection {
+            margin-bottom: 40px;
+        }
+
+        /* This styles the sub-headers within the blog post using EcoMart's signature green */
+        .postSection h2 {
+            color: #2F6F3E;
+            margin-bottom: 15px;
+            font-size: 28.8px;
+        }
+
+        /* This class styles the bibliography area at the bottom of the page */
+        .referenceSection {
+            margin-top: 60px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-size: 14.4px;
+        }
+
+        /* This adds standard padding to the numbered reference list */
+        .referenceSection ol {
+            padding-left: 20px;
+        }
+
+        /* This class creates the 'Floating' effect for the sidebar */
+        .stickyAside {
+            position: sticky; /* This logic keeps the sidebar visible while the user scrolls through long text */
+            top: 20px; /* This tells the sidebar to stop moving when it is 20 pixels from the top of the screen */
+            background: #ffffff;
+            width: 360px;
+            margin-top: 256px; /* This aligns the sidebar to start level with the first paragraph */
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        
+        /* Styles the header inside the sidebar */
+        .stickyAside h3 {
+            margin-top: 0;
+            color: #2F6F3E;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="logoContainer" style="width: 128px;">
+                <img src="../Assets/logo/logo.svg" alt="EcoMart Logo">
+            </div>
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signUp.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blogBanner">
+            <div class="contentArea">
+                <h1 style="color: #2F6F3E; font-size: 48px; margin-bottom: 15px;">The Future of Urban Transportation</h1>
+            </div>
+        </section>
+
+        <section class="contentArea" style="padding: 60px 20px;">
+            <div class="grid" style="display: flex; gap: 50px; align-items: start;">
+                
+                <div class="postContent">
+                    <article>
+                        <div style="margin-bottom: 30px;">
+                            <h1 style="color: #2F6F3E; font-size: 40px; margin-bottom: 10px;">Urban Mobility and Sustainability</h1>
+                            
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 700; color: #333;">Rochit Tako</p>
+                                        <p style="margin: 0; font-size: 13px; color: #666;">
+                                            Jan 28, 2026 • 5 min read
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btnPrimary" style="padding: 8px 16px; cursor: pointer; border-radius: 4px; font-weight: 600;">Follow</button>
+                            </div>
+                        </div>
+                        
+                        <div class="heroImage">
+                            <img src="../Assets/urbanTransportation.jpg" alt="Urban Transportation Concept">
+                        </div>
+
+                        <div class="postSection">
+                            <h2>About Urban Transportation</h2>
+                            <p>Urban transportation means the transportation of people and goods within cities using different transportation systems such as buses, trains, bicycles, bikes, and cars. A global increase in urban populations and cities is facing pollution (Banister, 2008).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Positive Impact of Modern Transportation</h2>
+                            <p>Modern transportation helps in reducing travelling time and improves quality of life. Electric vehicles, ridesharing, and bike-sharing schemes have helped to reduce carbon emissions and save fossil fuels (Peter Newman & Jeffrey kenworthy, 2015).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Negative Impact of Urban Transportation</h2>
+                            <p>Even though technology is getting more advanced day by day, transportation produces air pollution, noise pollution and an increase in energy consumption. Using fossil fuels in bikes and cars contributes to climate change, which has been negatively affecting social and environmental health (Peter Schiller, Elvind Bruun & Jeffrey Kenworthy, 2010).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>How Transportation Innovation Promotes Sustainability</h2>
+                            <p>Urban transportation technologies help cities meet sustainability goals. For example, smart traffic systems, electric buses, and autonomous public transport reduce emissions while improving efficiency.</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Why Invest in Sustainable Transportation?</h2>
+                            <p>Sustainable transportation is referred to as an electric vehicle because which improves air quality, reduces carbon, and enhances urban mobility. Cities which adopt low-carbon transport solutions are often those who face improved public health and economic benefits (Litman, 2021).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Interviews with Urban Transport Experts</h2>
+                            <p>Urban plan makers and engineers provide awareness about the challenges and opportunities of sustainable city transportation. Singapore’s smart traffic systems and Amsterdam’s cycling infrastructure are studied by Expert interviews which reveal successful case studies (Dimitris Pojani & Dominic Stead, 2015).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>News & Updates on Transport Innovations</h2>
+                            <p>Keeping your electric mobility, autonomous vehicles, and urban mobility apps updated on highlighting the progress and adopting new technologies in major cities worldwide (Forum, 2022).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Community Stories & Successes</h2>
+                            <p>Carbon emissions and improved connectivity are done within the Communities by adopting bike-sharing programs. Many modern cities are using bicycles rather than cars, bikes or scooters to make themselves healthier and to make the city clean. The success of urban mobility initiatives has been played by the engagement of the citizens (Robert Cervero & Jun Murakami, 2010).</p>
+                        </div>
+
+                        <div class="postSection">
+                            <h2>Conclusion</h2>
+                            <p>Important point of city transportation: new technology makes travelling easier and more reliable by cutting down pollution and improving life in the cities, but problems like old infrastructure, fairness, and people’s habits still exist. Investing green transport and getting people involved can make cities healthier, more efficient, and ready for climate challenges (Banister, 2008) (Litman, 2021).</p>
+                        </div>
+                    </article>
+
+                    <section class="referenceSection">
+                        <h3>References</h3>
+                        <ol>
+                            <li>Banister, D. (2008). The sustainable Mobility Paradigm. Oxford: Elsevier.</li>
+                            <li>Dimitris Pojani & Dominic Stead. (2015). Sustainable Urban Transport in the Developing World: Beyond Megacities. Sustainability, 7784-7805.</li>
+                            <li>Forum, I. T. (2022). Transport Innovarion and Sustainability. Paris: OECD Publishing.</li>
+                            <li>Litman, T. (2021). Transportation and Environmental Policy: Planning for Sustainable Mobility. Victoria: Victoria Transport Policy Institute.</li>
+                            <li>Peter Newman & Jeffrey kenworthy. (2015). The End of Aautomobile Dependence. Washingtin, DC: Island Press.</li>
+                            <li>Peter Schiller, Elvind Bruun & Jeffrey Kenworthy. (2010). An Introduction to Sustainable Transportation: Policy, Planning, and Implementation. London: Earthscan.</li>
+                            <li>Robert Cervero & Jun Murakami. (2010). Effects of Built Environments on Vehicle Miles Traveled: Evidence from 370 US Urbanized Areas. Environment and Planning A: Economy and Space, 400-418.</li>
+                        </ol>
+                    </section>
+                </div>
+
+                <aside>
+                    <div class="stickyAside">
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E;">More From Rochit...</h3>
+                        <ul style="list-style: none; margin-top: 15px; padding: 0;">
+                            <li style="margin-bottom: 15px;"><a href="blog2.html" style="text-decoration: none; color: #333; font-weight: 600;">Consumer Behavior And Technology</a></li>
+                            <li style="margin-bottom: 15px;"><a href="blog3.html" style="text-decoration: none; color: #333; font-weight: 600;">The Future of Urban Transportation</a></li>
+                            <li style="margin-bottom: 15px;"><a href="blog.html" style="text-decoration: none; color: #333; font-weight: 600;">Technology And Sustainable Living</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerBottom">
+            <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

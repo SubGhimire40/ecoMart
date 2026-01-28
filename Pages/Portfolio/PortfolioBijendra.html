@@ -6,45 +6,42 @@
     <meta name="description" content="EcoMart - Sustainable Product Catalog">
     <title>Portfolio</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
-	
-</head>
-<style>
-body {
+    
+    <style>
+    /* Setting base theme background color */
+    body {
         background-color: #EEF6F1;
     }
-    .port: {
 
-            
-            
-            display: flex;
-            align-items: center;
-            text-align: center;
-           
-            
+    /* Hero section flex configuration */
+    .port {
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 
-    
+    /* Main content container using flex for horizontal layout */
     .mainBox {
-       max-width: 4400px;
+        max-width: 4400px;
         margin: 110px;
-        padding:40px ;
+        padding: 40px;
         display: flex;
         gap: 60px;
         background-color: #ffffff;
-       
-        
     }
 
-    
-    .leftArea {flex: 1;
-            max-width: 400px;
-            background: #FAFAF8;
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #f0f0f0;}
+    /* Left column flex properties for profile highlight */
+    .leftArea {
+        flex: 1;
+        max-width: 400px;
+        background: #FAFAF8;
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #f0f0f0;
+    }
 
-    /* IMAGE BOX */
+    /* Box model sizing for the profile image container */
     .imgFrame {
         width: 320px;
         height: 320px;
@@ -57,6 +54,7 @@ body {
         padding: 10px;
     }
 
+    /* Image scaling within frame using cover fit */
     .imgFrame img {
         width: 100%;
         height: 100%;
@@ -64,18 +62,19 @@ body {
         display: block;
     }
 
-    
+    /* Right column spacing */
     .rightArea {
         margin-top: 20px;
     }
 
-    
+    /* Typography styling for headers */
     .titleText {
         font-size: 28px;
         color: #2f5d3a;
         margin-bottom: 15px;
     }
 
+    /* Body paragraph line-height and spacing */
     .mainBox p {
         font-size: 16px;
         line-height: 1.6;
@@ -83,16 +82,13 @@ body {
         color: #2d2d2d;
     }
 
-
-    
-
-        .detailsRow {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
+    /* row for aligning boxes side-by-side */
+    .detailsRow {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
     </style>
-
 </head>
 <body>
 
@@ -105,7 +101,7 @@ body {
         <nav>
             <ul>
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="../products.html" >Shop</a></li>
+                <li><a href="../products.html">Shop</a></li>
                 <li><a href="../blog.html">Blog</a></li>
                 <li><a href="../research.html">Research</a></li>
                 <li><a href="../about.html" class="active">About Us</a></li>
@@ -113,12 +109,12 @@ body {
             </ul>
         </nav>
     </header>
+
     <section class="port">
-            <div class="contentArea">
-                <h1 style="font-size: 56px; margin-bottom: 20px;">ABOUT US</h1>
-                
-            </div>
-        </section>
+        <div class="contentArea">
+            <h1 style="font-size: 56px; margin-bottom: 20px;">ABOUT ME</h1>
+        </div>
+    </section>
 
     <main class="mainBox">
         <div class="leftArea">
@@ -126,59 +122,55 @@ body {
                 <img src="../../Assets/BijendraPratapKarki.jpg" alt="Bijendra Pratap Karki">
             </div>
             <h1>Bijendra Pratap Karki</h1>
-
-            
         </div>
 
         <div class="rightArea">
-
             <section class="detailsRow">
-            <div class="previewBox" style="flex: 1;">
-                <h3>SKILLS</h3>
-                <ul style="padding-left: 20px; color: #2F6F3E;">
-                    <li>UI/UX Design</li>
-                    <li>Web Development</li>
-                    <li>Time Management</li>
-                    
-                </ul>
-                <hr style="border:1px solid #eeeeee; margin: 10px 0;">
-                <div style="margin: 16px 0;">
-                    <h3>CONTACT ME</h3>
-                    <div style="margin-top: 15px;">
-                        <p style="margin: 8px 0;">
-                            <strong style="color: #2F6F3E;">Phone:</strong> +977 9863307632
-                        </p>
-                        <p style="margin: 8px 0;">
-                            <strong style="color: #2F6F3E;">Email:</strong> <a href="mailto:bijendrapratapkarki@gmail.com" style="text-decoration: none; color: inherit;">bijendrapratapkarki@gmail.com</a>
-                        </p>
-                        <p style="margin: 8px 0;">
-                            <strong style="color: #2F6F3E;">Instagram:</strong> <a href="https://www.instagram.com/karkibijendra460
-/" style="color: inherit; text-decoration: none;">@karkibijendra460
-</a>
-                        </p>
+                <div class="previewBox" style="flex: 1;">
+                    <h3>SKILLS</h3>
+                    <ul style="padding-left: 20px; color: #2F6F3E;">
+                        <li>UI/UX Design</li>
+                        <li>Web Development</li>
+                        <li>Time Management</li>
+                    </ul>
+                    <hr style="border:1px solid #eeeeee; margin: 10px 0;">
+                    <div style="margin: 16px 0;">
+                        <h3>CONTACT ME</h3>
+                        <div style="margin-top: 15px;">
+                            <p style="margin: 8px 0;">
+                                <strong style="color: #2F6F3E;">Phone:</strong> +977 9863307632
+                            </p>
+                            <p style="margin: 8px 0;">
+                                <strong style="color: #2F6F3E;">Email:</strong> <a href="mailto:bijendrapratapkarki@gmail.com" style="text-decoration: none; color: inherit;">bijendrapratapkarki@gmail.com</a>
+                            </p>
+                            <p style="margin: 8px 0;">
+                                <strong style="color: #2F6F3E;">Instagram:</strong> <a href="https://www.instagram.com/karkibijendra460/" style="color: inherit; text-decoration: none;">@karkibijendra460</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="previewBox" style="flex: 1; margin-left: 30px;">
-                <h3 style="margin-bottom: 64px;">EXPERIENCE</h3>
-                <div style="margin: 16px 0;">
-                    <span style="font-weight: 700; color: #2F6F3E;">2025-2026</span>
-                    <p>Frontend Developer For EcoMart Project</p>
-                </div> 
-                
-            </div>
-            <div class="previewBox" style="flex: 1; margin-left: 30px;">
-                <h3 style="margin-bottom: 64px;">WITH REGARDS TO ECOMART:</h3>
-                <div style="margin: 16px 0;">
-                    
-                    <p><i>Our mission is to bridge the gap between high-quality consumer goods and sustainable manufacturing practices.</i></p>
+
+                <div class="previewBox" style="flex: 1; margin-left: 30px;">
+                    <h3 style="margin-bottom: 64px;">EXPERIENCE</h3>
+                    <div style="margin: 16px 0;">
+                        <span style="font-weight: 700; color: #2F6F3E;">2025-2026</span>
+                        <p>Frontend Developer For EcoMart Project</p>
+                    </div> 
                 </div>
-        </section>
+
+                <div class="previewBox" style="flex: 1; margin-left: 30px;">
+                    <h3 style="margin-bottom: 64px;">WITH REGARDS TO ECOMART:</h3>
+                    <div style="margin: 16px 0;">
+                        <p><i>Our mission is to bridge the gap between high-quality consumer goods and sustainable manufacturing practices.</i></p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
+    
 
-</body>
-<footer>
+    <footer>
         <div class="footerGrid">
             <div class="footerBrand">
                 <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
@@ -188,17 +180,18 @@ body {
             </div>
             <div class="footerLinks">
                 <h4>Quick Links</h4>
-                            <ul>
-                
-                <li><a href="../products.html">Shop</a></li>
-                <li><a href="../blog.html" >Blog</a></li>
-                <li><a href="../research.html">Research</a></li>
-                <li><a href="../about.html">About Us</a></li>
-            </ul>
+                <ul>
+                    <li><a href="../products.html">Shop</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
             </div>
         </div>
         <div class="footerBottom">
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+
+</body>
 </html>

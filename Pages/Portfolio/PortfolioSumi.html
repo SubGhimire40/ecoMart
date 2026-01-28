@@ -6,10 +6,61 @@
     <meta name="description" content="EcoMart - Sustainable Product Catalog">
     <title>Portfolio</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
-	
+    
+    <style>
+        /* Base page background and sizing */
+        .mainBody {
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #c3e0d1 0%, #c3e0d1 100%); 
+            min-height: 1080px;
+        }
+
+        /* Profile header section */
+        .profileBox {
+            background-color: #8fbfa6; 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Reusable floating white card like box */
+        .cardBox {
+            background-color: white; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Title style for headings */
+        .titleSection {
+            color: #82bf5a; 
+            border-bottom: 3px solid #82bf5a; 
+            padding-bottom: 10px; 
+            margin-top: 0;
+        }
+
+        /* content text */
+        .bodySection {
+            line-height: 1.8; 
+            color: #4a5568; 
+            font-size: 17.6px;
+        }
+
+        /* Individual list for experience section */
+        .listItemBox {
+            margin-bottom: 10px; 
+            padding: 10px; 
+            background-color: #f7fafc; 
+            margin-left: -20px; 
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-	<header>
+    <header>
         <a href="../index.html">
             <div class="logoContainer" style="width: 128px;">
                 <img src="../../Assets/logo/logo.svg" alt="EcoMart Logo">
@@ -27,8 +78,56 @@
         </nav>
     </header>
 
-</body>
-<footer>
+    <div class="mainBody">
+        <div class="profileBox">
+            <h1 style="margin: 0; font-size: 40px; letter-spacing: 2px;">Sumi Rajkarnikar</h1>
+        </div>
+
+        <main style="max-width: 900px; margin: 40px auto 0; padding: 20px 20px;">
+            <section class="cardBox">
+                <h2 class="titleSection">About Me</h2>
+                <p class="bodySection">Welcome to my portfolio! I'm passionate about web development and continuously improving my programming skills.</p>
+            </section>
+
+            <section class="cardBox">
+                <h2 class="titleSection">Skills</h2>
+                <ul class="bodySection">
+                    <li>Wireframing and UI/UX Designing</li>
+                    <li>HTML & CSS</li>
+                </ul>
+            </section>
+
+            
+
+            <section class="cardBox">
+                <h2 class="titleSection">Experience & Skills</h2>
+                <ul style="line-height: 2; color: #4a5568; font-size: 16.8px;">
+                    <li class="listItemBox" style="border-left: 4px solid #84b08f;">Completed a computer workshop to improve programming knowledge</li>
+                    <li class="listItemBox" style="border-left: 4px solid #539162;">Received IT Club Certificate</li>
+                    <li class="listItemBox" style="border-left: 4px solid #84b08f;">Gained experience using Balsamiq for wireframing and UI design</li>
+                    <li class="listItemBox" style="border-left: 4px solid #539162;">Created simple websites using Google Sites</li>
+                    <li class="listItemBox" style="border-left: 4px solid #84b08f;">Learned basic web development: HTML, CSS, JavaScript</li>
+                    <li class="listItemBox" style="border-left: 4px solid #539162;">Participated in school/college computer-related activities and coding exercises</li>
+                </ul>
+            </section>
+
+            <section class="cardBox">
+                <h2 class="titleSection">Contact & Links</h2>
+                <div class="bodySection">
+                    <p><b>Phone Number :</b> 9762618938</p>
+                    <p><b>Email : </b> rajkarnikarsumii@gmail.com</p>
+                    <strong style="color: #2d3748;">GitHub:</strong>
+                    <a href="https://github.com/rajkarnikarsumi-cpu" target="_blank" rel="noopener noreferrer" 
+                       style="color: #667eea; text-decoration: none; font-weight: bold; border-bottom: 2px solid #667eea;">
+                        github.com/rajkarnikarsumi-cpu
+                    </a>
+                </div>
+                <p class="bodySection" style="margin-top: 15px;">Feel free to reach out and connect!</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
         <div class="footerGrid">
             <div class="footerBrand">
                 <div class="altLogoContainer" style="width: 128px; margin-bottom: 15px;">
@@ -38,17 +137,17 @@
             </div>
             <div class="footerLinks">
                 <h4>Quick Links</h4>
-                            <ul>
-                
-                <li><a href="../products.html">Shop</a></li>
-                <li><a href="../blog.html" >Blog</a></li>
-                <li><a href="../research.html">Research</a></li>
-                <li><a href="../about.html">About Us</a></li>
-            </ul>
+                <ul>
+                    <li><a href="../products.html">Shop</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
             </div>
         </div>
         <div class="footerBottom">
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+</body>
 </html>
