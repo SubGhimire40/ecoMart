@@ -162,7 +162,7 @@
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Bamboo Basket</div>
+            <div class="titleText" id="productName">Bamboo Basket</div>
 
             <p>
                 Bamboo baskets are highly marketable, eco-friendly, and versatile, appealing to eco-conscious consumers and those looking for traditional home decor or storage solutions. They are commonly sold as hand-woven, sustainable alternatives to plastic for various purposes. 
@@ -173,10 +173,11 @@
             <div class="priceTag">
                 Rs. 250 <span class="oldPrice">Rs. 750</span>
             </div>
+             <p style="color: #ff6600; font-size: 16px;">Offer ends in: <span id="timer"></span></p>
 
             <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">
@@ -213,6 +214,7 @@
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="../../Scripts/javascript.js"></script>
 
 </body>
 </html>

@@ -7,27 +7,26 @@
     <title>About Us | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* Sets a fixed width for the individual team member cards */
-        .previewBox {
+        .previewBox
+        {
             width: 350px;
             flex-direction: row;
         }
        
-        /* This class creates a flexible grid that automatically spaces team member cards */
-        .grid {
+       .grid
+       {
             display: flex;
-            gap: 32px; /* Adds consistent breathing room between each member card */
+            gap: 32px;
             padding: 0 35px 35px;
             margin: auto;
-        }
-
-        /* Ensures the content inside each team card (name, bio, tags) stacks vertically */
-        .memberCard {
+       }
+       .memberCard
+       {
             display: flex;
             flex-direction: column;
-        }
+       }
 
-        /* This styles the small green highlight boxes used for member skills */
+        /* Small green boxes for skills */
         .skillTag {
             display: inline-block;
             background: #EEF6F1;
@@ -39,14 +38,14 @@
             font-weight: 600;
         }
         
-        /* Styles the educational and role description for each team member */
+        /* The text describing the person */
         .memberBio {
             margin-top: 15px;
             font-size: 13.6px;
             line-height: 1.4;
         }
 
-        /* This styles the light-green background section for the inquiry form */
+        /* The big box for the message form */
         .contactBlock {
             background: #EEF6F1;
             padding: 64px 32px;
@@ -55,16 +54,16 @@
             border: 1px solid #e0e0e0;
         }
 
-        /* Adds spacing between the bio text and the skill tags */
+        /* Spacing for the skill boxes */
         .tagList {
             margin: 15px 0;
         }
 
-        /* Styles the contact email area at the bottom of each member card */
+        /* The area showing the email link */
         .emailInfo {
             margin-top: 20px; 
             padding-top: 15px; 
-            border-top: 1px solid #eee; /* Creates a subtle line to separate contact info from the bio */
+            border-top: 1px solid #eee; 
             font-size: 13.6px;
         }
 
@@ -74,7 +73,7 @@
             font-weight: 600;
         }
 
-        /* This ensures that form labels and their input fields are stacked for easier mobile use */
+        /* Stacked rows for the form inputs */
         .formRow {
             display: flex; 
             flex-direction: column;
@@ -85,7 +84,6 @@
             font-weight: 600;
         }
 
-        /* Standardizes the look of all text inputs and textareas in the form */
         .formRow input, .formRow select, .formRow textarea {
             padding: 12px; 
             border: 1px solid #ccc; 
@@ -93,7 +91,7 @@
             font-family: inherit;
         }
 
-        /* Styles the small, bold job titles above member names */
+        /* Small loud text for job titles */
         .labelSmall {
             font-weight: bold; 
             text-transform: uppercase; 
@@ -239,7 +237,8 @@
                 </div>
                 <div class="formRow">
                     <label>Your Message</label>
-                    <textarea name="message" placeholder="How can we help?" style="height: 120px; width: 1070px;" required></textarea>
+                    <textarea name="message" id="messageBox"placeholder="How can we help?" maxlength="300"style="height:100px; width: 1050px;"required></textarea>
+                    <p id="charCount" style="font-size: 13px; color: #666;">Characters: 0 / 300 </p>
                 </div>
                 <button type="submit" class="btnPrimary" style="width: fit-content; cursor: pointer; border: none;">Submit Inquiry</button>
             </form>
@@ -268,5 +267,23 @@
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+    const messageBox = document.getElementById("messageBox");
+    const charCount = document.getElementById("charCount");
+    const maxChars = 300;
+    messageBox.addEventListener("input", () => {
+        const currentLength = messageBox.value.length;charCount.textContent = `Characters: ${currentLength} / ${maxChars}`;
+    });
+
+    //alert for inquiry
+    var form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // stops page refresh
+        alert("Thank you! Your inquiry has been sent.");
+        form.reset(); // clears form
+    });
+</script>
+
 </body>
 </html>

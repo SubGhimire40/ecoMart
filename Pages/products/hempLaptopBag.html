@@ -6,11 +6,6 @@
     <title>Hemp Laptop Bag | EcoMart</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
 
-        I have updated your product detail page for the Hemp Laptop Bag. I added specific comments to explain the Flexbox layout, the Box Model (padding and margins), and the Image Handling logic to ensure your code is clean and VIVA-ready.
-
-Updated Product Page (hemp-laptop-bag.html)
-HTML
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,7 +170,7 @@ HTML
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Hemp Laptop Bag</div>
+            <div class="titleText" id="productName">Hemp Laptop Bag</div>
 
             <p>
                 Carry sustainably with our eco-friendly Hemp Laptop Bag. Crafted from durable,
@@ -188,10 +183,11 @@ HTML
             <div class="priceTag">
                 Rs. 250 <span class="oldPrice">Rs. 750</span>
             </div>
+             <p style="color: #ff6600; font-size: 16px;">Offer ends in: <span id="timer"></span></p>
 
            <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">
@@ -226,6 +222,7 @@ HTML
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="../../Scripts/javascript.js"></script>
 
 </body>
 </html>

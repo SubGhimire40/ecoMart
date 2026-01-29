@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Hemp Yoga Mat | EcoMart</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
+    <script src="../../Scripts/javascript.js"></script>
 
-        <style>
+    <style>
     /* Sets the background color for the entire page to the EcoMart light green theme */
     body {
         background-color: #EEF6F1;
@@ -18,7 +19,7 @@
         margin: 180px auto 250px;
         padding: 40px;
         display: flex; /* This Flexbox logic aligns the image area and the text area side-by-side */
-        gap: 60px; /* This creates a consistent 60px gutter between the image and the product details */
+        gap: 60px; /* This creates a consistent 60px gap between the image and the product details */
         align-items: flex-start; /* This ensures both sections align at the top of the container */
         background-color: #ffffff;
         border-radius: 16px;
@@ -162,7 +163,7 @@
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Hemp Yoga Mat</div>
+            <div class="titleText" id="productName">Hemp Yoga Mat</div>
             
             <p>Hemp yoga mats are perfect for ad statements emphasizing sustainability, natural grip, and ethical craftsmanship.</p>
 
@@ -173,8 +174,8 @@
             </div>
 
             <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">

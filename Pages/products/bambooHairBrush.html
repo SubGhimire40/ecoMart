@@ -162,7 +162,7 @@
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Bamboo Hair Brush</div>
+            <div class="titleText" id="productName">Bamboo Hair Brush</div>
 
             <p>
                Bamboo hairbrushes reduce static build-up, helping to minimize frizz and flyaways for a smoother and sleeker look.
@@ -173,10 +173,11 @@
             <div class="priceTag">
                 Rs. 650 <span class="oldPrice">Rs. 970</span>
             </div>
+             <p style="color: #ff6600; font-size: 16px;">Offer ends in: <span id="timer"></span></p>
 
            <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">
@@ -211,6 +212,7 @@
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="../../Scripts/javascript.js"></script>
 
 </body>
 </html>

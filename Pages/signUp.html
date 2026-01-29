@@ -116,11 +116,13 @@
             <h2>Join EcoMart Today!</h2>
             <p class="subtitle">Start your journey toward sustainable living.</p>
 
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="E-mail Address" required>
-                <input type="password" placeholder="Create Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+            <form onsubmit="return validateForm()">
+                    <input type="text" id="username" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="E-mail Address" required>
+                    <input type="password" id="password" placeholder="Create Password" required>
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required style="flex: 1; margin-right: 10px;">
+                </div>
                 
                 <button type="submit" class="btnPrimary"><a href="login.html" style="text-decoration: none; color: #ffffff;" >Create Account</a></button>
             </form>
@@ -152,6 +154,23 @@
         <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+    function validateForm() {
+    // Collects input values from the DOM
+    const username = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const conf = document.getElementById("confirm-password").value;
 
+    // Checks if password and confirmation match
+    if (pass !== conf) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    // Notifes user of success submission
+    alert(`Welcome, ${username}! Your account has been created.`);
+    return false;
+}
+</script>
 </body>
 </html>

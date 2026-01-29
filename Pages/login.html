@@ -7,85 +7,77 @@
     <title>Sign In | EcoMart</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <style>
-        /* This tag selector sets the background color for the entire page area */
+        /* Sets the base background for the page and ensures full height */
         body { 
             margin: 0; 
             min-height: 100vh; 
             background-color: #EEF6F1;
         }
 
-        /* This class styles the main container box that splits the screen into form and image sections */
+        /* Main box that holds the login form and the decorative image side-by-side */
         .authWrapper {
-            display: flex; /* This makes the login form and the forest image sit side-by-side */
+            display: flex;
             max-width: 1100px;
             margin: 50px auto;
             background: #ffffff;
             border-radius: 12px;
-            overflow: hidden; /* This acts as a mask to ensure the image corners match the box's rounded edges */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* This adds a soft shadow to make the login box pop out from the background */
+            /* Ensures content stays inside the rounded corners */
+            overflow: hidden;
+            /* Creates a soft shadow effect for a floating look */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
-        /* This class styles the left side of the box where the user enters their credentials */
+        /* The left half containing the form and inputs */
         .loginContainer {
-            flex: 1; /* This ensures the form area takes up exactly half of the available container width */
+            flex: 1;
             padding: 60px;
             display: flex;
-            flex-direction: column; /* This stacks the title and input fields vertically */
-            justify-content: center; /* This keeps the form content perfectly centered from top to bottom */
+            flex-direction: column;
+            justify-content: center;
         }
 
-        /* This class adds spacing between the login/signup tabs and the main header */
+        /* Styling for the login/signup switch at the top */
         .authTabs { margin-bottom: 30px; }
-
-        /* This styles the 'Log In' and 'Sign Up' links at the top of the white box */
         .authTabs a { 
             text-decoration: none; 
             color: #888; 
             margin-right: 20px; 
             font-weight: bold; 
         }
+        /* Underlines the "Log In" link to show it is currently selected */
+        .authTabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
 
-        /* This class identifies and underlines the link for the page the user is currently on */
-        .authTabs a.active { 
-            color: #1F2933; 
-            border-bottom: 2px solid #1F2933; /* This adds a dark line under the word to indicate selection */
-        }
-
-        /* This styles the main "Log In To Continue!" heading */
+        /* Form title styling */
         .loginContainer h2 { margin: 0 0 10px 0; font-size: 28px; }
 
-        /* This tag selector styles the boxes where the user types their username and password */
+        /* Uniform styling for text and password input fields */
         .loginContainer input {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* This logic prevents padding from making the input boxes wider than the form */
+            /* Prevents padding from changing the width of the box */
+            box-sizing: border-box;
         }
 
-        /* This class styles the right-side section displaying the decorative forest photograph */
+        /* The right half containing the atmospheric forest image */
         .decorationImg {
-            flex: 1; /* This ensures the image section takes up the remaining half of the container width */
+            flex: 1;
             background: url('../Assets/lush-green-bamboo-forest.jpg') center/cover no-repeat;
             min-height: 500px;
         }
 
-        /* This media query adjusts the layout specifically for screens narrower than 900 pixels (tablets/phones) */
+        /* Adjusts the layout for smaller screens like tablets or phones */
         @media (max-width: 900px) {
-            /* This changes the layout from side-by-side columns to a single vertical stack */
+            /* Switches from side-by-side to stacked vertically */
             .authWrapper { flex-direction: column; margin: 20px; }
-            
-            /* This moves the image to the top of the stack and shrinks its height for mobile viewing */
-            .decorationImg { 
-                height: 250px; 
-                order: -1; /* This CSS property forces the image to appear before the form in the vertical stack */
-            }
+            /* Places the image at the top of the stack on mobile */
+            .decorationImg { height: 250px; order: -1; }
         }
     </style>
 </head>
 <body>
-
 <header>
     <a href="../index.html">
         <div class="logoContainer" style="width: 128px;">
@@ -114,9 +106,9 @@
 
             <h2>Log In To Continue!</h2>
 
-            <form>
-                <input type="text" placeholder="Username/E-mail" required>
-                <input type="password" placeholder="Password" required>
+            <form onsubmit="return validateForm()">
+                <input type="text" id="username" placeholder="Username/E-mail" required>
+                <input type="password" id="password" placeholder="Password" required>
 
                 <button type="submit" class="btnPrimary" style="width: 40%; border: none; cursor: pointer;">Log In</button>
             </form>
@@ -124,6 +116,13 @@
 
         <div class="decorationImg"></div>
     </div>
+
+
+    <div id="popup" style="display:none; position:fixed; top:50%; left:50%;transform:translate(-50%,-50%); background:#EEF6F1; padding:20px; border-radius:8px;">
+        <h3 id="popupText"></h3>
+        <button onclick="closePopup()" class="btnPrimary">OK</button>
+    </div>
+
 </main>
 
 <footer>
@@ -134,7 +133,6 @@
             </div>
             <p>Promoting ethical commerce since 2025.</p>
         </div>
-
         <div class="footerLinks">
             <h4>Quick Links</h4>
             <ul>
@@ -149,6 +147,36 @@
         <p>&copy; 2025 EcoMart Research - All Rights Reserved.</p>
     </div>
 </footer>
+
+ <script>
+    function validateForm() {
+    // Get the username and password values from the input fields
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    // Check if both fields have been filled out or not
+    if (user && pass) {
+
+        showPopup(user);
+    }
+    // Prevent the form from refreshing the page
+    return false;
+}
+
+function showPopup(name) {
+    // Insert the username into the popup greeting text
+    document.getElementById("popupText").innerText = `Welcome ${name}`;
+    // Change the display style to make the hidden popup visible
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    // Hide the popup once the user clicks OK
+    document.getElementById("popup").style.display = "none";
+    // Redirect the user back to the homepage
+    window.location.href = "../index.html";
+}
+</script>
 
 </body>
 </html>

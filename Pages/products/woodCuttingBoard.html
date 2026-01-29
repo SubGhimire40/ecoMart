@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Bamboo Cutting Board | EcoMart</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
-
     <style>
     /* Sets the background color for the entire page to match the EcoMart light green theme */
     body {
@@ -162,7 +161,7 @@
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Wood Cutting Board</div>
+            <div class="titleText" id="productName">Wood Cutting Board</div>
 
             <p>
               Wood vegetable cutters (typically cutting boards or multi-tools with blades) are highly regarded for their durability, natural hygiene properties, and high sustainability compared to plastic or traditional wood alternatives.
@@ -171,12 +170,13 @@
             <div class="ratingSection">⭐⭐⭐⭐⭐ (4.0 Ratings)</div>
 
             <div class="priceTag">
-                Rs. 1250 <span class="oldPrice">Rs. 2650</span>
+                Rs. 1250 <span class="oldPrice">Rs. 2650</span> 
             </div>
+            <p style="color: #ff6600; font-size: 16px;">Offer ends in: <span id="timer"></span></p>           
 
            <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">
@@ -211,6 +211,6 @@
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
-
+    <script src="../../Scripts/javascript.js"></script>
 </body>
 </html>

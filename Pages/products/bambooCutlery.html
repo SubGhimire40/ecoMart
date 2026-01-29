@@ -162,7 +162,7 @@
         </div>
 
         <div class="rightArea">
-            <div class="titleText">Bamboo Cutlery</div>
+            <div class="titleText" id="productName">Bamboo Cutlery</div>
             
             <p>Choose Nature. Choose Bamboo. A sustainable switch from single-use plastic</p>
 
@@ -171,10 +171,11 @@
             <div class="priceTag">
                 Rs. 750 <span class="oldPrice">Rs. 1290</span>
             </div>
+             <p style="color: #ff6600; font-size: 16px;">Offer ends in: <span id="timer"></span></p>
 
             <div class="actionButtons">
-                <button class="buyNow">Buy Now</button>
-                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow" onclick="buyNow()">Buy Now</button>
+                <button class="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="deliveryBox">
@@ -209,6 +210,7 @@
             <p>&copy; 2025 EcoMart Group Project - All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="../../Scripts/javascript.js"></script>
 
 </body>
 </html>

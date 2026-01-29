@@ -7,6 +7,104 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="../../CSS/styles.css">
 	
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BASE STYLES */
+    .body {
+      font-family: monospace;
+      background-color: #f3f2ee;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .header strong {
+        font-size: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 40px 0;
+    }
+
+    /* MAIN */
+    .main small {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .main h1 {
+      font-size: 50px;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    .main p {
+        font-size: 18px;
+      max-width: 500px;
+      color: #333;
+    }
+
+    /* SECTION  */
+    section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item-title {
+        font-size: 16px;
+      font-weight: 500;
+    }
+
+    .item-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* FOOTER  */
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #000000;
+      margin-top: 80px;
+    }
+  </style>
+
 </head>
 <body>
 	<header>
@@ -26,6 +124,125 @@
             </ul>
         </nav>
     </header>
+
+    <div class="body">
+  <div class="container">
+
+    <div class="header">
+      <strong>My Portfolio</strong>
+    </div>
+
+    <div class="main">
+      <h1>Hi, I'm Tulakshya Shrestha.</h1>
+      <p>
+        A first-year Bachelor of Science (Hons) in Computing student who's excited about technology, design, 
+        and developing simple but meaningful digital experiences.
+      </p>
+    </div>
+
+    <hr>
+    <section>
+      <h2>Technical Skills</h2>
+
+      <div class="item">
+        <div>
+            <div class="item-title">JavaScript (basic DOM manipulation)</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Form creation & validation</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">HTML</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">CSS</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Using code editors (VS Code)</div>
+        </div>
+      </div>
+    </section>
+
+
+    <hr>
+    <section>
+      <h2>Soft Skills</h2>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Problem-solving</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Teamwork and collaboration</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Time management</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Creativity</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+            <div class="item-title">Presentation skills</div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <h2>Education</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-title">Premier International School</div>
+          <div class="item-desc">Completed secondary school with an excellent foundation in academics, communication, and basic computer studies.
+            Participated in projects and activities that developed working together and problem-solving abilities.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-title">Islington College</div>
+          <div class="item-desc"> I am currently a student in the BSc (Hons) Computing program at Islington College. As a first-year student, I am developing a strong foundation in information technology, 
+            programming, and problem-solving. With the objective to help students prepare for careers in the computing and technology sectors, 
+            Islington College provides an environment for learning that focuses on both academic knowledge and practical skills.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+        <p>Contact Me: </p>
+            <p>
+        Email: <a href="#">tulakshya007@gmail.com</a> |
+        Phone: +977 9823860266 |
+        GitHub: <a href="#">github.com/Tu-lu-lu</a>
+            </p>
+      &copy; 2026 Tulakshya Shrestha
+    </div>
+    </div>
 
 </body>
 <footer>

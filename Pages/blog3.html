@@ -69,15 +69,14 @@
         /* This class creates the 'Floating' effect for the sidebar */
         .stickyAside {
             position: sticky; /* This logic keeps the sidebar visible while the user scrolls through long text */
-            top: 20px; /* This tells the sidebar to stop moving when it is 20 pixels from the top of the screen */
+            top: 100px; /* This tells the sidebar to stop moving when it is 20 pixels from the top of the screen */
             background: #ffffff;
             width: 360px;
-            margin-top: 256px; /* This aligns the sidebar to start level with the first paragraph */
+            margin-top: 20px; /* This aligns the sidebar to start level with the first paragraph */
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #eee;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            z-index: 10;
         }
         
         /* Styles the header inside the sidebar */
@@ -198,8 +197,8 @@
                     </section>
                 </div>
 
-                <aside>
-                    <div class="stickyAside">
+                <aside class="stickyAside">
+                    <div>
                         <h3 style="margin-bottom: 15px; border-bottom: 2px solid #2F6F3E;">More From Rochit...</h3>
                         <ul style="list-style: none; margin-top: 15px; padding: 0;">
                             <li style="margin-bottom: 15px;"><a href="blog2.html" style="text-decoration: none; color: #333; font-weight: 600;">Consumer Behavior And Technology</a></li>
