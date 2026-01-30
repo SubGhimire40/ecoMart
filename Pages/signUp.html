@@ -14,7 +14,7 @@
         }
 
         /* Centered container that holds both the form and the side image */
-        .authWrapper {
+        .formContainer {
             display: flex;
             max-width: 1100px;
             margin: 50px auto;
@@ -36,10 +36,13 @@
         }
 
         /* Navigation links at the top of the form to switch between Log In and Sign Up */
-        .authTabs { margin-bottom: 30px; }
+        .tabs 
+        { 
+            margin-bottom: 30px; 
+        }
         
         /* General styling for the tab links */
-        .authTabs a { 
+        .tabs a { 
             text-decoration: none; 
             color: #888; 
             margin-right: 20px; 
@@ -47,7 +50,7 @@
         }
 
         /* Highlights the current page link with a dark underline */
-        .authTabs a.active { 
+        .tabs a.active { 
             color: #1F2933; 
             border-bottom: 2px solid #1F2933; 
         }
@@ -106,9 +109,10 @@
 </header>
 
 <main>
-    <div class="authWrapper">
+    <!-- Form container holding both the sign-up form and the decorative image -->
+    <div class="formContainer">
         <div class="signupContainer">
-            <div class="authTabs">
+            <div class="tabs">
                 <a href="login.html">Log In</a>
                 <a href="#" class="active">Sign Up</a>
             </div>
@@ -127,7 +131,7 @@
                 <button type="submit" class="btnPrimary"><a href="login.html" style="text-decoration: none; color: #ffffff;" >Create Account</a></button>
             </form>
         </div>
-
+        <!-- Right Side image container -->
         <div class="decorationImg"></div>
     </div>
 </main>

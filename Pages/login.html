@@ -15,7 +15,7 @@
         }
 
         /* Main box that holds the login form and the decorative image side-by-side */
-        .authWrapper {
+        .formBox {
             display: flex;
             max-width: 1100px;
             margin: 50px auto;
@@ -24,7 +24,7 @@
             /* Ensures content stays inside the rounded corners */
             overflow: hidden;
             /* Creates a soft shadow effect for a floating look */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px #0000001a;
         }
 
         /* The left half containing the form and inputs */
@@ -37,15 +37,18 @@
         }
 
         /* Styling for the login/signup switch at the top */
-        .authTabs { margin-bottom: 30px; }
-        .authTabs a { 
+        .tabs 
+        { 
+            margin-bottom: 30px; 
+        }
+        .tabs a { 
             text-decoration: none; 
             color: #888; 
             margin-right: 20px; 
             font-weight: bold; 
         }
         /* Underlines the "Log In" link to show it is currently selected */
-        .authTabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
+        .tabs a.active { color: #1F2933; border-bottom: 2px solid #1F2933; }
 
         /* Form title styling */
         .loginContainer h2 { margin: 0 0 10px 0; font-size: 28px; }
@@ -71,7 +74,7 @@
         /* Adjusts the layout for smaller screens like tablets or phones */
         @media (max-width: 900px) {
             /* Switches from side-by-side to stacked vertically */
-            .authWrapper { flex-direction: column; margin: 20px; }
+            .formBox { flex-direction: column; margin: 20px; }
             /* Places the image at the top of the stack on mobile */
             .decorationImg { height: 250px; order: -1; }
         }
@@ -97,9 +100,9 @@
 </header>
 
 <main>
-    <div class="authWrapper">
+    <div class="formBox">
         <div class="loginContainer">
-            <div class="authTabs">
+            <div class="tabs">
                 <a href="#" class="active">Log In</a>
                 <a href="signUp.html">Sign Up</a>
             </div>

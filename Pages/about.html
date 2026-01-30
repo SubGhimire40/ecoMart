@@ -137,7 +137,7 @@
         <section style="text-align: center; margin-bottom: 50px;">
             <h1 style="font-size: 40px; color: #2F6F3E; margin-bottom: 10px;">Meet Our Team</h1>
         </section>
-
+        <!-- Team Member Bio Cards Grid -->
         <div class="memberCard">
         <div class="grid">
             
@@ -235,7 +235,7 @@
             </article>
         </div>
         </div>
-
+        <!-- Contact Form Area -->
         <section class="contactBlock" id="contact">
             <h1 style="margin-bottom: 10px;">Send us an Inquiry</h1>
             <form id="contactForm" style="display: grid; gap: 20px; max-width: 600px;">
@@ -289,7 +289,7 @@
     </div>
 
     <script>
-    const messageBox = document.getElementById("messageBox");
+   const messageBox = document.getElementById("messageBox");
     const charCount = document.getElementById("charCount");
     const maxChars = 300;
 
@@ -298,17 +298,17 @@
         charCount.textContent = `Characters: ${currentLength} / ${maxChars}`;
     });
 
-    var form = document.getElementById("contactForm");
+    const form = document.getElementById("contactForm");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("popUp").style.display = "flex";
+        event.preventDefault(); // Stop page reload on submission
+        document.getElementById("popUp").style.display = "flex"; // Trigger modal visibility
         form.reset();
     });
 
     function closePopUp() {
         document.getElementById("popUp").style.display = "none";
-        charCount.textContent = `Characters: 0 / ${maxChars}`;
+        charCount.textContent = `Characters: 0 / ${maxChars}`; // Manual reset of counter display
     }
 </script>
 
